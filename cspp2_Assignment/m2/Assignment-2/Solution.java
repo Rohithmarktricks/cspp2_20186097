@@ -27,7 +27,7 @@ public final class Solution {
     * @param y takes input
     * @param z takes input
     */
-    public static void rootsOfQuadraticEquation(final int x, final int y, final int z){
+    public static void rootsOfQuadraticEquation(final int x, final int y, final int z) {
         double root1 = Math.sqrt(y * y - 4 * x * z);
         double root2 = Math.sqrt(y * y - 4 * x * z);
         int dnm = 2 * x;
