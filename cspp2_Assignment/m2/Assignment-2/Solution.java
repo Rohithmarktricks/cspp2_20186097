@@ -5,10 +5,10 @@ import java.util.Scanner;
 */
 
 public final class Solution {
+    public static final int FOUR = 4;
      /**
     * Do not modify this main function.
     */
-    public static final int FOUR = 4;
     private Solution() {
         //empty constructor.
     }
@@ -28,7 +28,9 @@ public final class Solution {
     * @param y takes input
     * @param z takes input
     */
-    public static void rootsOfQuadraticEquation(final int x, final int y, final int z) {
+    public static void rootsOfQuadraticEquation(final int x,
+                                                final int y,
+                                                final int z) {
         double root1 = Math.sqrt(y * y - FOUR * x * z);
         double root2 = Math.sqrt(y * y - FOUR * x * z);
         int dnm = 2 * x;
