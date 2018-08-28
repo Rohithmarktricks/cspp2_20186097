@@ -4,7 +4,7 @@ import java.util.Scanner;
 * Date 28th August 2018
 */
 public final class Solution {
-    /*
+    /**
     * Do not modify this main function.
     */
     private Solution() {
