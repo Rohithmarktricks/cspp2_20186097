@@ -5,7 +5,7 @@ import java.util.Scanner;
 */
 public final class Solution {
     /*
-    Do not modify this main function.
+    * Do not modify this main function.
     */
     private Solution() {
         //empty constructor.
@@ -25,9 +25,9 @@ public final class Solution {
     * @return power
     */
     public static long power(final int x, final int y) {
-        if (y == 1){
+        if (y == 1) {
             return x;
-        } else if (y == 0){
+        } else if (y == 0) {
             return 1;
         } else {
             return (long) x * power(x, y - 1);
