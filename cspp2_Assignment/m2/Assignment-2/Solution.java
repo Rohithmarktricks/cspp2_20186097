@@ -4,7 +4,7 @@ public class Solution {
 	/*
 	Do not modify this main function.
 	*/
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int a = scan.nextInt();
 		int b = scan.nextInt();
@@ -14,7 +14,7 @@ public class Solution {
 	/*
 	Need to write the rootsOfQuadraticEquation function and print the output.
 	*/
-	public static void rootsOfQuadraticEquation(int x, int y, int z){
+	public static void rootsOfQuadraticEquation(final int x, final int y, final int z){
 		double root1 = Math.sqrt(y * y - 4 * x * z);
 		double root2 = Math.sqrt(y * y - 4 * x * z);
 		int dnm = 2 * x;
