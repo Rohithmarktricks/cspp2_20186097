@@ -5,10 +5,10 @@ import java.util.Scanner;
 */
 
 public final class Solution {
-    public static final int FOUR = 4;
      /**
     * Do not modify this main function.
     */
+    public static final int FOUR = 4;
     private Solution() {
         //empty constructor.
     }
