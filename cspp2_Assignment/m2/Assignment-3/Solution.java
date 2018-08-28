@@ -17,21 +17,20 @@ public class Solution {
 		Scanner s=new Scanner(System.in);      
         int base = s.nextInt();
         int exponent = s.nextInt();
-        int result=power(base,exponent);
-        System.out.println(result);
+       	System.out.println((long)power(base,exponent));
 	}
 	/**
     * @param x takes input.
     * @param y takes input.
     * @return power
     */
-	public static int power(final int x, final int y){
+	public static long power(final int x, final int y){
 		if (y == 1){
 			return x;
 		} else if (y == 0){
 			return 1;
 		} else {
-			return x*power(x, y-1);
+			return (long)x*power(x, y-1);
 		}
 	}
 }
