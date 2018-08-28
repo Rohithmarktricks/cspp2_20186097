@@ -5,6 +5,9 @@ import java.util.Scanner;
 */
 
 public final class Solution {
+    /**
+    * @variable FOUR.
+    */
     public static final int FOUR = 4;
      /**
     * Do not modify this main function.
