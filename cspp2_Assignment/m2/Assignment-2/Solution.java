@@ -15,6 +15,7 @@ public final class Solution {
     * @param args is of string type: value taken from command prompt
     *
     */
+    public static final int FOUR = 4;
     public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
         int a = scan.nextInt();
@@ -28,8 +29,8 @@ public final class Solution {
     * @param z takes input
     */
     public static void rootsOfQuadraticEquation(final int x, final int y, final int z) {
-        double root1 = Math.sqrt(y * y - 4 * x * z);
-        double root2 = Math.sqrt(y * y - 4 * x * z);
+        double root1 = Math.sqrt(y * y - FOUR * x * z);
+        double root2 = Math.sqrt(y * y - FOUR * x * z);
         int dnm = 2 * x;
         System.out.println((root1 - y) / dnm + " " + (-root2 - y) / dnm);
 
