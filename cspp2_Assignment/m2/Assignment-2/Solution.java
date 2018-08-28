@@ -19,9 +19,7 @@ public class Solution {
 		double root1 = Math.sqrt(y*y - 4*x*z);
 		double root2 = Math.sqrt(y*y - 4*x*z);
 		int dnm = 2 * x;
-		System.out.format("root1 : %d", root1 + y/dnm);
-		System.out.format("root2 : %d", root2 - y/dnm);
-
+		System.out.println(root1 + y/dnm + " " + root2 + y/dnm );
 
 	}
 }
