@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.lang.Math.*;
 
 public class Solution {
 	/*
@@ -16,10 +15,10 @@ public class Solution {
 	Need to write the rootsOfQuadraticEquation function and print the output.
 	*/
 	public static void rootsOfQuadraticEquation(int x, int y, int z){
-		double root1 = Math.sqrt(y*y - 4*x*z);
-		double root2 = Math.sqrt(y*y - 4*x*z);
+		double root1 = Math.sqrt(y * y - 4 * x * z);
+		double root2 = Math.sqrt(y * y - 4 * x * z);
 		int dnm = 2 * x;
-		System.out.println((root1 - y)/dnm + " " + (-root2 - y)/dnm );
+		System.out.println((root1 - y) / dnm + " " + (-root2 - y) / dnm );
 
 	}
 }
