@@ -11,11 +11,11 @@ public final class Solution {
     private Solution() {
         //empty constructor.
     }
+    public static final int FOUR = 4;
      /**
     * @param args is of string type: value taken from command prompt
     *
     */
-    public static final int FOUR = 4;
     public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
         int a = scan.nextInt();
