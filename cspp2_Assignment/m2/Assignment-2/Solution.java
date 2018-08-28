@@ -5,13 +5,13 @@ import java.util.Scanner;
 */
 
 public final class Solution {
+    public static final int FOUR = 4;
      /**
     * Do not modify this main function.
     */
     private Solution() {
         //empty constructor.
     }
-    public static final int FOUR = 4;
      /**
     * @param args is of string type: value taken from command prompt
     *
