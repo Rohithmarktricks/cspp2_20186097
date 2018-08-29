@@ -9,7 +9,6 @@ public class Solution {
     */
     public static void main(final String[] args) {
         Scanner s=new Scanner(System.in);
-        System.out.print("Enter the limit : ");    
         int n = s.nextInt();
         int no_sevens = 0;
         for (int i = 0; i <= n; i++){
