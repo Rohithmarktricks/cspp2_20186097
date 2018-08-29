@@ -1,12 +1,19 @@
-
 import java.util.Scanner;
-/*
-	Do not modify this main function.
-	*/
+/**
+* @author : Rohithmarktricks.
+* Date : 29th August 2018.
+*/
 public class Solution {
-
+    /**
+    * class Solution.
+    */
+    protected Solution(){
+        //empty Solution constructor.
+    }
+    /**
+    * @param args of string type.
+    */
     public static void main(String[] args) {
-
         Scanner s=new Scanner(System.in);      
         int n1 = s.nextInt();
         int n2 = s.nextInt();
@@ -25,3 +32,4 @@ public class Solution {
         return 1;
     }
 }
+
