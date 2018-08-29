@@ -6,7 +6,7 @@ public class Solution {
     /**
     * Fill the main function to print the number of 7's between 1 to n.
     */
-    protected Solution(){
+    protected Solution() {
         // empty constructor.
     }
     /**
@@ -18,7 +18,9 @@ public class Solution {
         int noSevens = 0;
         for (int i = 0; i <= n; i++) {
             for (char c : String.valueOf(i).toCharArray()) {
-                if (c == '7') noSevens++;
+                if (c == '7') {
+                    noSevens++;
+                }
             }
         }
         System.out.println(noSevens);
