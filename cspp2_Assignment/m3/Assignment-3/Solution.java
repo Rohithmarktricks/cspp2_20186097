@@ -25,7 +25,13 @@ public class Solution {
     * @return int type
     */
     public static int gcd(final int x, final int y) {
-        int min = x < y ? x : y;
+        ///int min = x < y ? x : y;
+        int min = 0;
+        if (x > y) {
+            min = y;
+        } else {
+            min = x;
+        }
         for (int i = min; i >= 1; i--) {
             if (x % i == 0 & y % i == 0) {
                 return i;
