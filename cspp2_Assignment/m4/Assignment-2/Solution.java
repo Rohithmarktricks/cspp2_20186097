@@ -34,12 +34,14 @@ public class Solution {
         }
         if (x == z & y == v) {
         int result = 0;
+        String temp = "";
         for (int k = 0; k < x; k++) {
             for (int l = 0; l < y; l++){
                 result = arr1[k][l] + arr2[k][l];
-                System.out.format("%d ",result);
+                temp += result + ", ";
             }
-            System.out.format("\n");
+            temp =temp.trim();
+            temp += "\n";
         }
         } else {
             System.out.println("not possible");
