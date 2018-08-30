@@ -16,12 +16,12 @@ public class Solution {
      *
      * @return     { description_of_the_return_value }
      */
-    public static int[][] createMatrix(Scanner scan) {
+    public static int[][] createMatrix(final Scanner scan) {
         int x = scan.nextInt();
         int y = scan.nextInt();
-            int[][] arr1 = new int[x][y];
+        int[][] arr1 = new int[x][y];
         for (int i = 0; i < x; i++) {
-            for (int j = 0; j < y; j++){
+            for (int j = 0; j < y; j++) {
                 arr1[i][j] = scan.nextInt();
             }
         }
@@ -32,9 +32,9 @@ public class Solution {
      *
      * @param      args  The arguments.
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
-        int[][] arr1 = createMatrix(scan); 
+        int[][] arr1 = createMatrix(scan);
         int[][] arr2 = createMatrix(scan);
         int x = arr1.length, z = arr2.length;
         int y = arr1[0].length, v = arr2[0].length;
@@ -42,11 +42,11 @@ public class Solution {
             int result = 0;
             String temp = "";
             for (int k = 0; k < x; k++) {
-                for (int l = 0; l < y; l++){
+                for (int l = 0; l < y; l++) {
                     result = arr1[k][l] + arr2[k][l];
                     temp += result + " ";
                 }
-                temp =temp.trim();
+                temp = temp.trim();
                 temp += "\n";
             }
             System.out.println(temp);
