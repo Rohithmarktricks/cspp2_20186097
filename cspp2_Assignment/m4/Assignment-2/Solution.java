@@ -10,11 +10,13 @@ public class Solution {
 		//empty Constructor.
 	}
 	protected static int[][] matrix(int x, int y){
+		int num = 0;
 		Scanner scan = new Scanner(System.in);
 		int[][] arr = new int[x][y];
 		for (int i = 0; i < x; i++) {
 			for (int j = 0; j < y; j++){
-				arr[i][j] = scan.nextInt();
+				num = scan.nextInt();
+				arr[i][j] = num;
 			}
 		}
 		return arr;
