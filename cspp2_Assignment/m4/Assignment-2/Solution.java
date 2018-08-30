@@ -38,12 +38,12 @@ public class Solution {
         for (int k = 0; k < x; k++) {
             for (int l = 0; l < y; l++){
                 result = arr1[k][l] + arr2[k][l];
-                temp += result + ", ";
+                temp += result + " ";
             }
             temp =temp.trim();
             temp += "\n";
-            System.out.println(temp);
         }
+        System.out.println(temp);
         } else {
             System.out.println("not possible");
         }
