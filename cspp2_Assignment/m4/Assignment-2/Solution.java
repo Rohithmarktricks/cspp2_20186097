@@ -28,11 +28,14 @@ public class Solution {
         Scanner scan = new Scanner(System.in);
         int x = scan.nextInt();
         int y = scan.nextInt();
-        int[][] arr1 = matrix(x,y);
+        int[][] arr1 = new int[x][y]; 
+        arr1 = matrix(x,y);
         int z = scan.nextInt();
         int v = scan.nextInt();
-        int[][] arr2 = matrix(z,v);
+        int[][] arr2 = new int[z][v];
+        arr2 = matrix(z,v);
         //int[][] result = new int[x][y];
+
         int result = 0;
         for (int k = 0; k < x; k++) {
             for (int l = 0; l < y; l++){
