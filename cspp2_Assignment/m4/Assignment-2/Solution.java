@@ -9,16 +9,6 @@ public class Solution {
     protected Solution() {
         //empty Constructor.
     }
-    protected static int[][] matrix(int x, int y){
-        Scanner scan1 = new Scanner(System.in);
-        int[][] arr = new int[x][y];
-        for (int i = 0; i < x; i++) {
-            for (int j = 0; j < y; j++){
-                arr[i][j] = scan1.nextInt();
-            }
-        }
-        return arr;
-    }
     /**
      * Main method.
      *
@@ -29,11 +19,19 @@ public class Solution {
         int x = scan.nextInt();
         int y = scan.nextInt();
         int[][] arr1 = new int[x][y]; 
-        arr1 = matrix(x,y);
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < y; j++){
+                arr1[i][j] = scan.nextInt();
+            }
+        }
         int z = scan.nextInt();
         int v = scan.nextInt();
         int[][] arr2 = new int[z][v];
-        arr2 = matrix(z,v);
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < y; j++){
+                arr2[i][j] = scan.nextInt();
+            }
+        }
         //int[][] result = new int[x][y];
 
         int result = 0;
@@ -44,5 +42,5 @@ public class Solution {
             }
             System.out.format("\n");
         }
-    }
+}
 }
