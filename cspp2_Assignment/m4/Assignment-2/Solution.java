@@ -32,8 +32,7 @@ public class Solution {
                 arr2[i][j] = scan.nextInt();
             }
         }
-        //int[][] result = new int[x][y];
-
+        if (x == z & y == v) {
         int result = 0;
         for (int k = 0; k < x; k++) {
             for (int l = 0; l < y; l++){
@@ -42,5 +41,9 @@ public class Solution {
             }
             System.out.format("\n");
         }
+        } else {
+            System.out.println("not possible");
+        }
+        //int[][] result = new int[x][y];
 }
 }
