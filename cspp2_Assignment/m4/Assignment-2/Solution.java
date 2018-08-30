@@ -42,6 +42,7 @@ public class Solution {
             }
             temp =temp.trim();
             temp += "\n";
+            System.out.println(temp);
         }
         } else {
             System.out.println("not possible");
