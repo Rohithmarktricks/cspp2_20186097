@@ -7,13 +7,13 @@ public class Solution {
     /**
      * Constructs the object.
      */
-    protected Solution(){
+    protected Solution() {
         //empty Constructor.
     }
 
 
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      args  The arguments
      */
@@ -23,7 +23,7 @@ public class Solution {
         //sc.nextLine();
         for (int i = 0; i < n; i++) {
             String s = sc.next();
-            String res = binaryToDecimal(s); 
+            String res = binaryToDecimal(s);
             System.out.println(res);
         }
     }
