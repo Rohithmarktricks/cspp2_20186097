@@ -30,6 +30,7 @@ public class Solution {
     /**
      * binaryToDecimal method.
      * @param str takes a binary string.
+     * @return decimal str.
      */
 
     final static String binaryToDecimal(final String str) {
