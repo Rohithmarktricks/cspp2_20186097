@@ -7,7 +7,6 @@ public final class DegreesToFarenheit {
     /**
     * constructor.
     */
-
     protected DegreesToFarenheit() {
         //empty constructor
     }
@@ -15,7 +14,6 @@ public final class DegreesToFarenheit {
     * @param args is of string type: value taken from command prompt
     *
     */
-
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the temperature in degrees :");
