@@ -33,7 +33,7 @@ public class Solution {
      * @return decimal str.
      */
 
-    final static String binaryToDecimal(final String str) {
+    static String binaryToDecimal(final String str) {
         int sum = 0;
         int i = 1;
         for (int j = str.length() - 1; j >= 0; j--) {
