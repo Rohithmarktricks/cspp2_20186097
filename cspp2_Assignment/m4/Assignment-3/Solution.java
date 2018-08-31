@@ -11,7 +11,7 @@ public class Solution {
 	 *
 	 * @param      args  The arguments
 	 */
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
 		//sc.nextLine();
@@ -21,8 +21,12 @@ public class Solution {
 			System.out.println(res);
 		}
 	}
+	/**
+	 * binaryToDecimal method.
+	 * @param str takes a binary string.
+	 */
 
-	final static String binaryToDecimal(String str) {
+	final static String binaryToDecimal(final String str) {
 		int sum = 0;
 		int i = 1;
 		for (int j = str.length() - 1; j >= 0; j--) {
