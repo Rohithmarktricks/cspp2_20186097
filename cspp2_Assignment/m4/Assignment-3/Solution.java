@@ -3,19 +3,35 @@
 
 
 import java.util.Scanner;
-public class Solution
-{/*
-	Do not modify this main function.
-	*/
-	public static void main(String[] args)
-	{
+public class Solution {
+
+
+/**
+ * { function_description }
+ *
+ * @param      args  The arguments
+ */
+	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		int n= sc.nextInt();
-		for(int i=0;i<=n;i++){
-			String s=sc.nextLine();
-			String res=binaryToDecimal(s);//Write binaryToDecimal function
+		for(int i=0; i<=n; i++) {
+			String s = sc.nextLine();
+			String res = binaryToDecimal(s);//Write binaryToDecimal function
 			System.out.println(res);
 		}
 	}
 
+	final static String binaryToDecimal(String str){
+		int sum = 0;
+		int i = 1;
+		for(int j = str.length() - 1; j >= 0; j--) {
+			if (str.charAt(j) == '1'){
+				sum += i;
+				i *= 2;
+			} else {
+				sum += 0;
+			}
+		}
+		return String.valueOf(sum);
+}
 }
