@@ -30,7 +30,6 @@ public class Solution {
 				sum += i;
 				i *= 2;
 			} else {
-				sum += 0;
 				i *= 2;
 			}
 		}
