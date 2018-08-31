@@ -30,6 +30,7 @@ public class Solution {
 				i *= 2;
 			} else {
 				sum += 0;
+				i *= 2;
 			}
 		}
 		return String.valueOf(sum);
