@@ -12,6 +12,8 @@ public final class Solution {
     private Solution() {
         //not used
     }
+    static final int three = 3;
+    static final int nine = 9;
     /**
      * Prints the odd composite numbers between 2 and n.
      *
@@ -19,8 +21,8 @@ public final class Solution {
      */
     static void oddComposites(final int n) {
         // write your code here
-        for (int i = 9; i < n; i = i + 2) {
-            for (int j = 3; j <= n; j++) {
+        for (int i = nine; i < n; i = i + 2) {
+            for (int j = three; j <= n; j++) {
                 if ((i != j) & (i % j == 0)) {
                     System.out.println(i);
                     break;
