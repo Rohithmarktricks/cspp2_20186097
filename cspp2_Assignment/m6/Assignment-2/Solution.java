@@ -12,17 +12,53 @@ final class Solution {
     private Solution() {
         //not used
     }
+    /**
+     * FIFTY.
+     */
     static final int FIFTY = 50;
+    /**
+     * ONEFIFTY.
+     */
     static final int ONEFIFTY = 150;
+    /**
+     * TWOFIFTY.
+     */
     static final int TWOFIFTY = 250;
+    /**
+     * THREEFIFTY.
+     */
     static final int THREEFIFTY = 350;
+    /**
+     * FOURFIFTY.
+     */
     static final int FOURFIFTY = 450;
+    /**
+     * FIVEFIFTY.
+     */
     static final int FIVEFIFTY = 550;
+    /**
+     * ZERO.
+     */
     static final int ZERO = 0;
+    /**
+     * HUNDRED.
+     */
     static final int HUNDRED = 100;
+    /**
+     * TWOHUNDRED.
+     */
     static final int TWOHUNDRED = 200;
+    /**
+     * THREEHUNDRED.
+     */
     static final int THREEHUNDRED = 300;
+    /**
+     * FOURHUNDRED.
+     */
     static final int FOURHUNDRED = 400;
+    /**
+     * FIVEHUNDRED.
+     */
     static final int FIVEHUNDRED = 500;
     /**
      * Function to round the
@@ -40,7 +76,7 @@ final class Solution {
             for (int j = 0; j < columns; j++) {
                 if (a[i][j] < FIFTY) {
                     a[i][j] = ZERO;
-                } else if ( a[i][j] >= FIFTY & a[i][j] < ONEFIFTY) {
+                } else if (a[i][j] >= FIFTY & a[i][j] < ONEFIFTY) {
                     a[i][j] = HUNDRED;
                 } else if (a[i][j] >= ONEFIFTY & a[i][j] < TWOFIFTY) {
                     a[i][j] = TWOHUNDRED;
