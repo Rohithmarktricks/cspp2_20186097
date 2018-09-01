@@ -12,6 +12,18 @@ final class Solution {
     private Solution() {
         //not used
     }
+    static final int FIFTY = 50;
+    static final int ONEFIFTY = 150;
+    static final int TWOFIFTY = 250;
+    static final int THREEFIFTY = 350;
+    static final int FOURFIFTY = 450;
+    static final int FIVEFIFTY = 550;
+    static final int ZERO = 0;
+    static final int HUNDRED = 100;
+    static final int TWOHUNDRED = 200;
+    static final int THREEHUNDRED = 300;
+    static final int FOURHUNDRED = 400;
+    static final int FIVEHUNDRED = 500;
     /**
      * Function to round the
      * elements of a matrix to the nearest 100.
@@ -26,18 +38,18 @@ final class Solution {
                 final int rows, final int columns) {
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                if (a[i][j] < 50) {
-                    a[i][j] = 0;
-                } else if ( a[i][j] >= 50 & a[i][j] < 150) {
-                    a[i][j] = 100;
-                } else if (a[i][j] >= 150 & a[i][j] < 250) {
-                    a[i][j] = 200;
-                } else if (a[i][j] >= 250 & a[i][j] < 350) {
-                    a[i][j] = 300;
-                } else if (a[i][j] >= 350 & a[i][j] < 450) {
-                    a[i][j] = 400;
-                } else if (a[i][j] >= 450 & a[i][j] < 550) {
-                    a[i][j] = 500;
+                if (a[i][j] < FIFTY) {
+                    a[i][j] = ZERO;
+                } else if ( a[i][j] >= FIFTY & a[i][j] < ONEFIFTY) {
+                    a[i][j] = HUNDRED;
+                } else if (a[i][j] >= ONEFIFTY & a[i][j] < TWOFIFTY) {
+                    a[i][j] = TWOHUNDRED;
+                } else if (a[i][j] >= TWOFIFTY & a[i][j] < THREEFIFTY) {
+                    a[i][j] = THREEHUNDRED;
+                } else if (a[i][j] >= THREEFIFTY & a[i][j] < FOURFIFTY) {
+                    a[i][j] = FOURHUNDRED;
+                } else if (a[i][j] >= FOURFIFTY & a[i][j] < FIVEFIFTY) {
+                    a[i][j] = FIVEHUNDRED;
                 }
             }
         }
