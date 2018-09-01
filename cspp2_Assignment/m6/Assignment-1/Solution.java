@@ -21,7 +21,7 @@ public final class Solution {
 		// write your code here
 		for (int i = 9; i < n; i = i + 2) {
 			for (int j = 3 ; j <=n ; j++) {
-				if (i % j == 0){
+				if ((i != j) & (i % j == 0)){
 					System.out.println(i);
 					break;
 				}
