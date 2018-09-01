@@ -6,37 +6,36 @@ import java.util.Scanner;
  * @author :
  */
 public final class Solution {
-	/**
-	* Empty constructor.
-	*/
-	private Solution() {
-		//not used
-	}
-	/**
-	 * Prints the odd composite numbers between 2 and n.
-	 *
-	 * @param      n     n value
-	 */
-	static void oddComposites(final int n) {
-		// write your code here
-		for (int i = 9; i < n; i = i + 2) {
-			for (int j = 3 ; j <=n ; j++) {
-				if ((i != j) & (i % j == 0)){
-					System.out.println(i);
-					break;
-				}
-			}
-			
-		}
-	}
-	/**
-	* main method as driver program.
-	* @param args is the parameter for this method
-	*/
-	public static void main(final String[] args) {
-		Scanner scan = new Scanner(System.in);
-		int n = scan.nextInt();
-		oddComposites(n);
-	}
+    /**
+    * Empty constructor.
+    */
+    private Solution() {
+        //not used
+    }
+    /**
+     * Prints the odd composite numbers between 2 and n.
+     *
+     * @param      n     n value
+     */
+    static void oddComposites(final int n) {
+        // write your code here
+        for (int i = 9; i < n; i = i + 2) {
+            for (int j = 3; j <= n; j++) {
+                if ((i != j) & (i % j == 0)) {
+                    System.out.println(i);
+                    break;
+                }
+            }
+        }
+    }
+    /**
+    * main method as driver program.
+    * @param args is the parameter for this method
+    */
+    public static void main(final String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        oddComposites(n);
+    }
 }
 
