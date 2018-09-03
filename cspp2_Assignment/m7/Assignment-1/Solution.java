@@ -30,9 +30,7 @@ class InputValidator {
      * @return     "true" or "false" based on length of string.
      */
     public boolean validateData() {
-        
-        return length >= SIX; 
-        
+        return length >= SIX;
     }
 
 }
