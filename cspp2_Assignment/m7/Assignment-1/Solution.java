@@ -43,6 +43,12 @@ class InputValidator {
  */
 class Solution {
     /**
+     * Constructs the object.
+     */
+    protected Solution(){
+        //empty Constructor.
+    }
+    /**
      * @param args of the String.
      */
     public static void main(final String[] args) {
