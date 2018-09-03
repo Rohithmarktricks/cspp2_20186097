@@ -18,7 +18,6 @@ class InputValidator {
      */
     protected InputValidator(final String name) {
         this.name = name;
-        this.length = name.length();
     }
     static final int SIX = 6;
     /**
@@ -27,6 +26,7 @@ class InputValidator {
      * @return     "true" or "false" based on length of string.
      */
     public String validateData() {
+        this.length = name.length();
         if (length >= SIX) {
             return "true";
         } else {
@@ -38,7 +38,7 @@ class InputValidator {
 /**
  * Class for solution.
  */
-public class Solution {
+class Solution {
     /**
      * @param args of the String.
      */
