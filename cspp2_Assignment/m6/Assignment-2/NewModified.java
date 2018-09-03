@@ -5,11 +5,11 @@ import java.util.Scanner;
  *
  * @author :
  */
-final class Solution {
+final class NewModified {
     /**
      * Constructs the object.
      */
-    private Solution() {
+    private NewModified() {
         //not used
     }
     /**
@@ -31,12 +31,12 @@ final class Solution {
      * @return     Matrix of the rounded elements
      */
     static int[][] roundHundred(final int[][] a,
-                final int rows, final int columns) {
+                                final int rows, final int columns) {
         int[][] realmatrix = new int[rows][columns];
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                int val = a[i][j]/FORTEST;
-                if (a[i][j] > (val * FORTEST) + TESTVALUE){
+                int val = a[i][j] / FORTEST;
+                if (a[i][j] > (val * FORTEST) + TESTVALUE) {
                     realmatrix[i][j] = (val + 1) * FORTEST;
                 } else {
                     realmatrix[i][j] = val * FORTEST;
