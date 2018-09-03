@@ -13,7 +13,7 @@ final class NewModified {
         //not used
     }
     /**
-     * FOR TESTING
+     * FOR TESTING.
      */
     static final int TESTVALUE = 49;
     /**
