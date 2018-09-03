@@ -20,7 +20,7 @@ class InputValidator {
      * @return     "true" or "false" based on length of string.
      */
     public String validateData() {
-        if ( length == 6) {
+        if ( length >= 6) {
             return "true";
         } else {
             return "false";
