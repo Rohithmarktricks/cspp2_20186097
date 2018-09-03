@@ -18,6 +18,7 @@ class InputValidator {
      */
     protected InputValidator(final String name) {
         this.strName = name;
+        this.length = strName.length();
     }
     /**
      * SIX takes integer 6.
@@ -28,13 +29,10 @@ class InputValidator {
      *
      * @return     "true" or "false" based on length of string.
      */
-    public String validateData() {
-        this.length = strName.length();
-        if (length >= SIX) {
-            return "true";
-        } else {
-            return "false";
-        }
+    public boolean validateData() {
+        
+        return length >= SIX; 
+        
     }
 
 }
