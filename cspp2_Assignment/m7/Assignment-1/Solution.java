@@ -19,6 +19,9 @@ class InputValidator {
     protected InputValidator(final String name) {
         this.strName = name;
     }
+    /**
+     * SIX takes integer 6.
+     */
     static final int SIX = 6;
     /**
      * to Validate the string.
