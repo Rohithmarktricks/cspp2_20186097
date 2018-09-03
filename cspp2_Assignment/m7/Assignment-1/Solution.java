@@ -6,7 +6,7 @@ class InputValidator {
     /**
      * takes the string.
      */
-    private String str_name;
+    private String strName;
     /**
      * calculates the length.
      */
@@ -17,7 +17,7 @@ class InputValidator {
      * @param      name  The name
      */
     protected InputValidator(final String name) {
-        this.str_name = name;
+        this.strName = name;
     }
     static final int SIX = 6;
     /**
@@ -26,7 +26,7 @@ class InputValidator {
      * @return     "true" or "false" based on length of string.
      */
     public String validateData() {
-        this.length = str_name.length();
+        this.length = strName.length();
         if (length >= SIX) {
             return "true";
         } else {
