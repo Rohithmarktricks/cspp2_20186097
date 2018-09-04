@@ -66,7 +66,7 @@ public class List {
     /**
      * SIZE of the list.
      */
-    final int LIMIT = 10;
+    private final int lIMIT = 10;
     /**
      * Constructs the object.
      */
@@ -82,7 +82,7 @@ public class List {
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
         // That is the initial value to use for size.
-        arr = new int[LIMIT];
+        arr = new int[lIMIT];
         size = 0;
     }
 
