@@ -64,6 +64,10 @@ public class List {
      * class variables with some default values.
      */
     /**
+     * SIZE of the list.
+     */
+    final int SIZE = 10;
+    /**
      * Constructs the object.
      */
     public List() {
@@ -78,7 +82,7 @@ public class List {
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
         // That is the initial value to use for size.
-        arr = new int[10];
+        arr = new int[SIZE];
         size = 0;
     }
 
@@ -146,7 +150,7 @@ public class List {
      *
      * @param      index  The index
      */
-    public void remove(int index) {
+    public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         //index -= 1;
