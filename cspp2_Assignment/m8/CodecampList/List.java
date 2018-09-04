@@ -32,7 +32,6 @@ public class List {
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
-    
     /**
      * input List.
      */
@@ -61,7 +60,6 @@ public class List {
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
-    
     /**
      * size of the list.
      */
