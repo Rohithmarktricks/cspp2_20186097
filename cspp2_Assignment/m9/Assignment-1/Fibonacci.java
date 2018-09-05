@@ -16,49 +16,62 @@ import java.util.Scanner;
  * by invoking the add method provided in the List ADT.
  *
  */
-
+/**
+ * Class for fibonacci.
+ */
 public class Fibonacci {
-	/*
-	 * fib is a static method takes a argument n
-	 * n is the count of the fibonacci numbers to be generated.
-	 * The method returns a List with the n fibonacci numbers.
-	 *
-	 * Look for the hint.txt if some of the testcases fail.
-	 */
-	/**
-	 * To create a list of fibonacci numbers.
-	 *
-	 * @param      n     integer.
-	 *
-	 * @return     List of fibonacci numbers.
-	 */
-	public static List fib(int n) {
-		List list = new List(n);
-		for (int i = 1; i <= n; i++) {
-			list.add(fibonacci(i));
-		}
-		return list;
-	}
+    /*
+     * fib is a static method takes a argument n
+     * n is the count of the fibonacci numbers to be generated.
+     * The method returns a List with the n fibonacci numbers.
+     *
+     * Look for the hint.txt if some of the testcases fail.
+     */
+    /**
+     * Constructs the object of fibonacci type.
+     */
+    protected Fibonacci(){
+        //empty fibonacci.
+    }
+    /**
+     * To create a list of fibonacci numbers.
+     *
+     * @param      n     integer.
+     *
+     * @return     List of fibonacci numbers.
+     */
+    public static List fib(int n) {
+        List list = new List(n);
+        for (int i = 1; i <= n; i++) {
+            list.add(fibonacci(i));
+        }
+        return list;
+    }
 
-	/**
-	 * To calculate the nth fibonacci number.
-	 *
-	 * @param      n     { takes integer }.
-	 *
-	 * @return     {Corresponding nth fibonacci number}.
-	 */
-	public static int fibonacci(int n) {
-		if (n <= 2) {
-			return n - 1;
-		} else {
-			return fibonacci(n - 1) + fibonacci(n - 2);
-		}
+    /**
+     * To calculate the nth fibonacci number.
+     *
+     * @param      n     { takes integer }.
+     *
+     * @return     {Corresponding nth fibonacci number}.
+     */
+    public static int fibonacci(int n) {
+        if (n <= 2) {
+            return n - 1;
+        } else {
+            return fibonacci(n - 1) + fibonacci(n - 2);
+        }
 
-	}
+    }
 
-	public static void main(String[] args) {
-		Scanner s = new Scanner(System.in);
-		int n = s.nextInt();
-		System.out.println(fib(n));
-	}
+    /**
+     * Main method.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        System.out.println(fib(n));
+    }
 }
