@@ -25,19 +25,33 @@ public class Fibonacci {
 	 *
 	 * Look for the hint.txt if some of the testcases fail.
 	 */
+	/**
+	 * To create a list of fibonacci numbers.
+	 *
+	 * @param      n     integer.
+	 *
+	 * @return     List of fibonacci numbers.
+	 */
 	public static List fib(int n) {
 		List list = new List(n);
-		for(int i = 1; i <= n; i++){
+		for (int i = 1; i <= n; i++) {
 			list.add(fibonacci(i));
 		}
 		return list;
 	}
 
+	/**
+	 * To calculate the nth fibonacci number.
+	 *
+	 * @param      n     { takes integer }.
+	 *
+	 * @return     {Corresponding nth fibonacci number}.
+	 */
 	public static int fibonacci(int n) {
-		if (n <= 2){
-			return n-1;
+		if (n <= 2) {
+			return n - 1;
 		} else {
-			return fibonacci(n-1) + fibonacci(n-2);
+			return fibonacci(n - 1) + fibonacci(n - 2);
 		}
 
 	}
