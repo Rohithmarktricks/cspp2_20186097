@@ -32,7 +32,6 @@ class InputValidator {
     public boolean validateData() {
         return length >= SIX;
     }
-
 }
 /**
  * Class for solution.
