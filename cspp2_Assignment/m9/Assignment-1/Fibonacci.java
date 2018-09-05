@@ -30,7 +30,7 @@ public class Fibonacci {
     /**
      * Constructs the object of fibonacci type.
      */
-    protected Fibonacci(){
+    protected Fibonacci() {
         //empty fibonacci.
     }
     /**
@@ -40,7 +40,7 @@ public class Fibonacci {
      *
      * @return     List of fibonacci numbers.
      */
-    public static List fib(int n) {
+    public static List fib(final int n) {
         List list = new List(n);
         for (int i = 1; i <= n; i++) {
             list.add(fibonacci(i));
@@ -55,7 +55,7 @@ public class Fibonacci {
      *
      * @return     {Corresponding nth fibonacci number}.
      */
-    public static int fibonacci(int n) {
+    public static int fibonacci(final int n) {
         if (n <= 2) {
             return n - 1;
         } else {
@@ -69,7 +69,7 @@ public class Fibonacci {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         System.out.println(fib(n));
