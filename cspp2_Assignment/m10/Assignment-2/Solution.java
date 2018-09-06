@@ -7,16 +7,17 @@ import java.util.Scanner;
 public class Solution {
 
     /**
-     * Main method.
-     *
-     * @param      args  The arguments
-     */
-    /**
      * Constructs the object.
      */
     protected Solution() {
         //empty constructor.
     }
+    
+    /**
+     * Main method.
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         StringList sl = new StringList();
