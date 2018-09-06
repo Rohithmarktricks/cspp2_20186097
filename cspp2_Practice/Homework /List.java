@@ -36,7 +36,10 @@ public class List {
     /**
      * array of list.
      */
-
+    private final int lIMIT = 10;
+    /**
+     * list array.
+     */
     private int[] list;
 
     /*
@@ -74,7 +77,9 @@ public class List {
      */
 
 
-
+    /**
+     * Constructs the object.
+     */
     public List() {
 
         // what are the two variables to be initialized here?
@@ -82,7 +87,7 @@ public class List {
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        list = new int[10];
+        list = new int[lIMIT];
 
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
@@ -111,7 +116,7 @@ public class List {
      *
      * @param      capacity  The capacity
      */
-    public List(int capacity) {
+    public List(final int capacity) {
         size = 0;
         list = new int[capacity];
     }
@@ -133,7 +138,7 @@ public class List {
      *
      * @param      item  The item
      */
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the zelist.
         list[size++] = item;
     }
@@ -157,7 +162,8 @@ public class List {
      * with the contents of the original array.
      *
      * TODO
-     * Create a method called resize(). Resize should create an new array that is
+     * Create a method called resize().
+     * Resize should create an new array that is
      * double the size of the old array.
      * Then copy the contents of the old array to the new one.
      *
@@ -165,7 +171,8 @@ public class List {
      * Will the client invoke resize or is it internal to List class?
      * Should the resize be public method or private?
      * Should the resize method return any values?
-     * You know enough of Object Oriented Programming to answer these questions :-)
+     * You know enough of Object
+     * Oriented Programming to answer these questions :-)
      *
      */
 
@@ -214,7 +221,7 @@ public class List {
      *
      * @param      index  The index
      */
-    public void remove(int index) {
+    public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         if (index >= 0 && index < size) {
@@ -246,7 +253,7 @@ public class List {
      *
      * @return     returns the element.
      */
-    public int get(int index) {
+    public int get(final int index) {
         if (index < 0 || index >= size) {
             return -1;
         } else {
@@ -281,8 +288,9 @@ public class List {
      * @return     String representation of the object.
      */
     public String toString() {
-        if (size == 0)
+        if (size == 0) {
             return "[]";
+        }
         String str = "[";
         int i = 0;
         for (i = 0; i < size - 1; i++) {
@@ -306,7 +314,7 @@ public class List {
      *
      * @return     true/false.
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         return indexOf(item) == -1;
     }
 
@@ -323,10 +331,11 @@ public class List {
      *
      * @return     first index of the match.
      */
-    public int indexOf(int item) {
+    public int indexOf(final int item) {
         for (int i = 0; i < size; i++) {
-            if (item == list[i])
+            if (item == list[i]) {
                 return i;
+            }
         }
         return -1;
     }
@@ -334,12 +343,12 @@ public class List {
      array to the end of list*/
 
     /**
-     * Method addAll
+     * Method addAll.
      * @param items : series of numbers.
      */
-    public void addAll(int items[]) {
+    public void addAll(final int[] items) {
 
-        for (int i = 0; i < items.length ; i++) {
+        for (int i = 0; i < items.length; i++) {
             if (list.length == size) {
                 resize();
             }
@@ -354,7 +363,7 @@ public class List {
      */
     public  void resize() {
         int[] newList = new int[list.length * 2];
-        for (int i = 0; i < size ; i++) {
+        for (int i = 0; i < size; i++) {
             newList[i] = list[i];
         }
         list = newList;
@@ -371,7 +380,7 @@ public class List {
      * @param      index  The index
      * @param      item   The item
      */
-    public void add(int index, int item) {
+    public void add(final int index, final int item) {
         if (index < 0) {
             System.out.println("Negative Index Exception");
         } else {
@@ -392,7 +401,7 @@ public class List {
      *
      * @return     count of the element of the list.
      */
-    public int count(int item) {
+    public int count(final int item) {
         int c = 0;
         for (int i = 0; i < list.length - 1; i++) {
             if (list[i] == item) {
@@ -407,7 +416,7 @@ public class List {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -427,8 +436,10 @@ public class List {
                     if (t.length == 1) {
                         l.add(Integer.parseInt(tokens[1]));
                     } else {
-                        if (t.length > 1)
-                            l.add(Integer.parseInt(t[0]), Integer.parseInt(t[1]));
+                        if (t.length > 1) {
+                            l.add(Integer.parseInt(t[0]),
+                                  Integer.parseInt(t[1]));
+                        }
                     }
                 }
                 break;
@@ -438,9 +449,10 @@ public class List {
             case "addAll":
                 if (tokens.length == 2) {
                     String[] t1 = tokens[1].split(",");
-                    int temp[] = new int[t1.length];
-                    for (int i = 0; i < temp.length; i++)
+                    int[] temp = new int[t1.length];
+                    for (int i = 0; i < temp.length; i++) {
                         temp[i] = Integer.parseInt(t1[i]);
+                    }
                     l.addAll(temp);
                 }
                 break;
@@ -467,6 +479,8 @@ public class List {
                 break;
             case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
+                break;
+            default:
                 break;
             }
         }
