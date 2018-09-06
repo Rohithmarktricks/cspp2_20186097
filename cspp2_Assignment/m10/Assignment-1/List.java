@@ -36,7 +36,7 @@ public class List {
     /**
      * array of list.
      */
-
+    final int lIMIT = 10;
     private int[] list;
 
     /*
@@ -74,7 +74,9 @@ public class List {
      */
 
 
-
+    /**
+     * Constructs the object.
+     */
     public List() {
 
         // what are the two variables to be initialized here?
@@ -82,7 +84,7 @@ public class List {
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        list = new int[10];
+        list = new int[lIMIT];
 
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
@@ -111,7 +113,7 @@ public class List {
      *
      * @param      capacity  The capacity
      */
-    public List(int capacity) {
+    public List(final int capacity) {
         size = 0;
         list = new int[capacity];
     }
@@ -133,7 +135,7 @@ public class List {
      *
      * @param      item  The item
      */
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the zelist.
         list[size++] = item;
     }
@@ -157,7 +159,8 @@ public class List {
      * with the contents of the original array.
      *
      * TODO
-     * Create a method called resize(). Resize should create an new array that is
+     * Create a method called resize().
+     * Resize should create an new array that is
      * double the size of the old array.
      * Then copy the contents of the old array to the new one.
      *
@@ -215,7 +218,7 @@ public class List {
      *
      * @param      index  The index
      */
-    public void remove(int index) {
+    public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         if (index >= 0 && index < size) {
@@ -308,7 +311,7 @@ public class List {
      *
      * @return     true/false.
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         return indexOf(item) == -1;
     }
 
@@ -357,7 +360,7 @@ public class List {
      */
     public  void resize() {
         int[] newList = new int[list.length * 2];
-        for (int i = 0; i < size ; i++) {
+        for (int i = 0; i < size; i++) {
             newList[i] = list[i];
         }
         list = newList;
