@@ -165,7 +165,8 @@ public class List {
      * Will the client invoke resize or is it internal to List class?
      * Should the resize be public method or private?
      * Should the resize method return any values?
-     * You know enough of Object Oriented Programming to answer these questions :-)
+     * You know enough of Object
+     * Oriented Programming to answer these questions :-)
      *
      */
 
@@ -246,7 +247,7 @@ public class List {
      *
      * @return     returns the element.
      */
-    public int get(int index) {
+    public int get(final int index) {
         if (index < 0 || index >= size) {
             return -1;
         } else {
@@ -281,8 +282,9 @@ public class List {
      * @return     String representation of the object.
      */
     public String toString() {
-        if (size == 0)
+        if (size == 0) {
             return "[]";
+        }
         String str = "[";
         int i = 0;
         for (i = 0; i < size - 1; i++) {
@@ -323,10 +325,11 @@ public class List {
      *
      * @return     first index of the match.
      */
-    public int indexOf(int item) {
+    public int indexOf(final int item) {
         for (int i = 0; i < size; i++) {
-            if (item == list[i])
+            if (item == list[i]) {
                 return i;
+            }
         }
         return -1;
     }
@@ -334,12 +337,12 @@ public class List {
      array to the end of list*/
 
     /**
-     * Method addAll
+     * Method addAll.
      * @param items : series of numbers.
      */
-    public void addAll(int items[]) {
+    public void addAll(final int[] items) {
 
-        for (int i = 0; i < items.length ; i++) {
+        for (int i = 0; i < items.length; i++) {
             if (list.length == size) {
                 resize();
             }
@@ -371,7 +374,7 @@ public class List {
      * @param      index  The index
      * @param      item   The item
      */
-    public void add(int index, int item) {
+    public void add(final int index, final int item) {
         if (index < 0) {
             System.out.println("Negative Index Exception");
         } else {
@@ -392,7 +395,7 @@ public class List {
      *
      * @return     count of the element of the list.
      */
-    public int count(int item) {
+    public int count(final int item) {
         int c = 0;
         for (int i = 0; i < list.length - 1; i++) {
             if (list[i] == item) {
@@ -407,7 +410,7 @@ public class List {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -427,8 +430,10 @@ public class List {
                     if (t.length == 1) {
                         l.add(Integer.parseInt(tokens[1]));
                     } else {
-                        if (t.length > 1)
-                            l.add(Integer.parseInt(t[0]), Integer.parseInt(t[1]));
+                        if (t.length > 1) {
+                            l.add(Integer.parseInt(t[0]),
+                                  Integer.parseInt(t[1]));
+                        }
                     }
                 }
                 break;
@@ -438,9 +443,10 @@ public class List {
             case "addAll":
                 if (tokens.length == 2) {
                     String[] t1 = tokens[1].split(",");
-                    int temp[] = new int[t1.length];
-                    for (int i = 0; i < temp.length; i++)
+                    int[] temp = new int[t1.length];
+                    for (int i = 0; i < temp.length; i++) {
                         temp[i] = Integer.parseInt(t1[i]);
+                    }
                     l.addAll(temp);
                 }
                 break;
@@ -467,6 +473,8 @@ public class List {
                 break;
             case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
+                break;
+            default:
                 break;
             }
         }
