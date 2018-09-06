@@ -36,7 +36,7 @@ public class List {
     /**
      * array of list.
      */
-    final int lIMIT = 10;
+    final private int lIMIT = 10;
     private int[] list;
 
     /*
