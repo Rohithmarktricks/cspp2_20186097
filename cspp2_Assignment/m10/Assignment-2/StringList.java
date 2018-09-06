@@ -45,7 +45,7 @@ public class StringList implements StringListInterface {
     // declare a private String[]
     // don't create the array yet using new
     // that's the job of the List constructor
-    
+
     /**
      * list of Strings.
      */
@@ -74,7 +74,7 @@ public class StringList implements StringListInterface {
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
-    
+
     /**
      * size of the list.
      */
@@ -216,7 +216,7 @@ public class StringList implements StringListInterface {
     public void remove(int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-         if (index >= 0 && index < size) {
+        if (index >= 0 && index < size) {
             for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
@@ -297,9 +297,16 @@ public class StringList implements StringListInterface {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
+    /**
+     * Checks if the string is present.
+     *
+     * @param      item  The item
+     *
+     * @return     true/false.
+     */
     public boolean contains(String item) {
         boolean val = false;
-        for (int i = 0; i < list.length; i++){
+        for (int i = 0; i < list.length; i++) {
             val = list.equals(item);
         }
         return val;
@@ -310,13 +317,20 @@ public class StringList implements StringListInterface {
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
+    /**
+     * Searches for the first match.
+     *
+     * @param      item  The item
+     *
+     * @return     index of the string in the list.
+     */
     public int indexOf(String item) {
         int ind = -1;
-        for (int i = 0; i < list.length; i++){
-            if (list.equals(item)){
+        for (int i = 0; i < list.length; i++) {
+            if (list.equals(item)) {
                 ind = i;
             }
         }
         return ind;
-        }
+    }
 }
