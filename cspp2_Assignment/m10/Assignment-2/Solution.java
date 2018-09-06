@@ -12,7 +12,6 @@ public class Solution {
     protected Solution() {
         //empty constructor.
     }
-    
     /**
      * Main method.
      *
