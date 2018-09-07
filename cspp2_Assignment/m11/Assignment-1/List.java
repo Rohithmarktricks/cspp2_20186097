@@ -70,7 +70,7 @@ public class List {
     /**
      * sets the limit for the list.
      */
-    public static int lIMIT = 10;
+    private final int lIMIT = 10;
     /**
      * Constructs the object.
      */
@@ -367,8 +367,7 @@ public class List {
      * Clears off the list.
      */
     public void clear() {
-        final int lIMIT1 = 10;
-        this.list = new int[10];
+        this.list = new int[lIMIT];
         this.size = 0;
 
     }
