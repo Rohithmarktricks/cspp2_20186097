@@ -349,13 +349,7 @@ public class List {
             return false;
         }
         for (int i = 0; i < this.size; i++) {
-            int count = 0;
-            for (int j = 0; j < array.size; j++) {
-                if (this.list[i] == array.list[j]) {
-                    count++;
-                }
-            }
-            if (count == 0) {
+            if (this.list[i] != array.list[i]) {
                 return false;
             }
         }
