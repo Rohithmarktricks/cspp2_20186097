@@ -147,7 +147,7 @@ public class Solution {
                 if (tokens.length == 2) {
                     String[] lt = tokens[1].split(",");
                     List l2 = new List();
-                    for (int k = 0; k < lt.length; k++ ) {
+                    for (int k = 0; k < lt.length; k++) {
                         l2.add(Integer.parseInt(lt[k]));
                     }
                     System.out.println(l.equals(l2));
@@ -166,7 +166,7 @@ public class Solution {
      *
      * @param      stdin  The stdin
      */
-    public static void executeListDouble(Scanner stdin) {
+    public static void executeListDouble(final Scanner stdin) {
         List<Double> l = new List();
         while (stdin.hasNext()) {
             // read the line
@@ -196,7 +196,8 @@ public class Solution {
                 break;
             case "indexOf":
                 if (tokens.length == 2) {
-                    System.out.println(l.indexOf(Double.parseDouble(tokens[1])));
+                    System.out.println(
+                        l.indexOf(Double.parseDouble(tokens[1])));
                 }
                 break;
             case "get":
