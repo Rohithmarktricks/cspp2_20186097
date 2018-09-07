@@ -207,7 +207,8 @@ public class Solution {
                 break;
             case "contains":
                 if (tokens.length == 2) {
-                    System.out.println(l.contains(Double.parseDouble(tokens[1])));
+                    System.out.println(
+                        l.contains(Double.parseDouble(tokens[1])));
                 }
                 break;
             case "addAll":
@@ -230,7 +231,7 @@ public class Solution {
                     l.removeAll(a);
                 }
                 break;
-            case "subList": {
+            case "subList":
                 if (tokens.length != 2) {
                     break;
                 }
@@ -241,7 +242,6 @@ public class Solution {
                     System.out.println(object);
                 }
                 break;
-            }
             case "equals":
                 if (tokens.length == 2) {
                     String[] lt = tokens[1].split(",");
