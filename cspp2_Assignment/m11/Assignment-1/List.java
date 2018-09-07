@@ -1,5 +1,6 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
+import java.util.Arrays;
 
 /**
  * Class List.
@@ -292,10 +293,12 @@ public class List {
      * @param      newArray  The new array
      */
     public void removeAll(final int[] newArray) {
+        int[] temp = Arrays.copyOf(list, list.length);
         for (int n : newArray) {
             for (int i = 0; i < size; i++) {
-                if (n == list[i]) {
+                if (n == temp[i]) {
                     remove(i);
+                    i--;
                 }
 
             }
@@ -319,7 +322,7 @@ public class List {
      */
     public List subList(final int start, final int end) {
         // write the logic for subList
-        if (start < 0 || end < 0 || start > end) {
+        if (start < 0 || end < 0 || start > end || size == 0) {
             System.out.println("Index Out of Bounds Exception");
             return null;
         }
