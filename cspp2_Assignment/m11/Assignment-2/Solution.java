@@ -265,7 +265,7 @@ public class Solution {
      *
      * @param      stdin  The stdin
      */
-    public static void executeListFloat(Scanner stdin) {
+    public static void executeListFloat(final Scanner stdin) {
         List<Float> l = new List();
         while (stdin.hasNext()) {
             // read the line
@@ -328,7 +328,7 @@ public class Solution {
                     l.removeAll(a);
                 }
                 break;
-            case "subList": {
+            case "subList":
                 if (tokens.length != 2) {
                     break;
                 }
@@ -339,7 +339,6 @@ public class Solution {
                     System.out.println(object);
                 }
                 break;
-            }
             case "equals":
                 if (tokens.length == 2) {
                     String[] lt = tokens[1].split(",");
