@@ -15,15 +15,17 @@ class Student {
      *
      * @param      name  The name
      */
-    public Student(final String name) {//A constructor used to initialize the instance variables
-        this.name = name;
+    Student(final String names) {
+        //A constructor used to initialize the instance variables
+        this.name = names;
     }
     /**
      * Gets the name.
      *
      * @return     The name.
      */
-    public String getName() {//Getter method which returns the value of instance variable
+    public String getName() {
+        //Getter method which returns the value of instance variable
         return this.name;
     }
     /**
