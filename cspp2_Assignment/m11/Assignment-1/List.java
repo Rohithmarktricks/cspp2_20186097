@@ -1,6 +1,9 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 
+/**
+ * Class List.
+ */
 public class List {
     //Implement all the methods mentioned to build a ListADT
 
@@ -65,6 +68,10 @@ public class List {
      * some default values.
      */
     /**
+     * sets the limit for the list.
+     */
+    public static int lIMIT = 10;
+    /**
      * Constructs the object.
      */
     public List() {
@@ -78,7 +85,7 @@ public class List {
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
         // That is the initial value to use for size.
-        list = new int[10];
+        list = new int[lIMIT];
         size = 0;
 
     }
@@ -87,7 +94,7 @@ public class List {
      *
      * @param      capacity  The capacity
      */
-    public List(int capacity) {
+    public List(final int capacity) {
         list = new int[capacity];
         size = 0;
     }
@@ -105,7 +112,7 @@ public class List {
      *
      * @param      item  The item
      */
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the list.
         list[size++] = item;
     }
@@ -146,7 +153,7 @@ public class List {
      *
      * @param      index  The index
      */
-    public void remove(int index) {
+    public void remove(final int index) {
         // write the logic for remove here. Think about what to do to the size
         // variable.
         if (index >= 0 && index < size) {
@@ -175,7 +182,7 @@ public class List {
      *
      * @return     returns the element.
      */
-    public int get(int index) {
+    public int get(final int index) {
         // Replace the code below to write the code for get
         if (index < 0 || index > size) {
             return -1;
@@ -226,7 +233,7 @@ public class List {
      *
      * @return     true/false.
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         return indexOf(item) != -1;
     }
     /*
@@ -240,7 +247,7 @@ public class List {
      *
      * @return     first index of the match.
      */
-    public int indexOf(int item) {
+    public int indexOf(final int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
             if (list[i] == item) {
@@ -254,9 +261,9 @@ public class List {
     */
     /**
      * Method addAll.
-     * @param items : series of numbers.
+     * @param newArray : series of numbers.
      */
-    public void addAll(int[] newArray) {
+    public void addAll(final int[] newArray) {
         for (int i = 0; i < newArray.length; i++) {
             if (list.length == size) {
                 resize();
@@ -284,9 +291,9 @@ public class List {
      *
      * @param      newArray  The new array
      */
-    public void removeAll(int[] newArray) {
+    public void removeAll(final int[] newArray) {
         for (int n : newArray) {
-            for (int i = 0; i < size; i++ ) {
+            for (int i = 0; i < size; i++) {
                 if (n == list[i]) {
                     remove(i);
                 }
@@ -310,18 +317,18 @@ public class List {
      *
      * @return     List.
      */
-    public List subList(int start, int end) {
+    public List subList(final int start, final int end) {
         // write the logic for subList
         if (start < 0 || end < 0 || start > end) {
             System.out.println("Index Out of Bounds Exception");
             return null;
         }
-        List new_list = new List(end - start);
-        for (int i = start; i < end; i++ ) {
-            new_list.add(list[i]);
+        List newList = new List(end - start);
+        for (int i = start; i < end; i++) {
+            newList.add(list[i]);
         }
 
-        return new_list;
+        return newList;
     }
     /*
     Returns a boolean indicating whether the parameter i.e a List object is
@@ -330,7 +337,7 @@ public class List {
     /**
      * Checks if the given lists are equal.
      *
-     * @param      list  The list
+     * @param      array  The list
      *
      * @return     True/False.
      */
@@ -441,7 +448,7 @@ public class List {
                     l.removeAll(a);
                 }
                 break;
-            case "subList": 
+            case "subList":
                 if (tokens.length != 2) {
                     break;
                 }
@@ -452,7 +459,6 @@ public class List {
                     System.out.println(object);
                 }
                 break;
-            
             case "equals":
                 if (tokens.length == 2) {
                     String[] lt = tokens[1].split(",");
