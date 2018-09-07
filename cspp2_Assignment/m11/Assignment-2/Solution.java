@@ -13,7 +13,7 @@ class Student {
     /**
      * Constructs the object.
      *
-     * @param      name  The name
+     * @param      names  The name
      */
     Student(final String names) {
         //A constructor used to initialize the instance variables
@@ -36,7 +36,8 @@ class Student {
      * @return     True/False.
      */
     @Override
-    public boolean equals(Object other) { //This method is to check if two students names are equal or not
+    public boolean equals(final Object other) {
+        //This method is to check if two students names are equal or not
         if (!(other instanceof Student)) {
             return false;
         }
@@ -68,7 +69,7 @@ public class Solution {
      *
      * @param      stdin  The stdin
      */
-    public static void executeListInteger(Scanner stdin) {
+    public static void executeListInteger(final Scanner stdin) {
         List<Integer> l = new List();
         while (stdin.hasNext()) {
             // read the line
@@ -131,7 +132,7 @@ public class Solution {
                     l.removeAll(a);
                 }
                 break;
-            case "subList": {
+            case "subList":
                 if (tokens.length != 2) {
                     break;
                 }
@@ -142,7 +143,6 @@ public class Solution {
                     System.out.println(object);
                 }
                 break;
-            }
             case "equals":
                 if (tokens.length == 2) {
                     String[] lt = tokens[1].split(",");
