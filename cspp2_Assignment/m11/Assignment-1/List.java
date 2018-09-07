@@ -341,7 +341,7 @@ public class List {
      *
      * @return     True/False.
      */
-    public boolean equals(List array) {
+    public boolean equals(final List array) {
         if (this.size != array.size) {
             return false;
         }
