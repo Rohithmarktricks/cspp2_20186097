@@ -9,6 +9,11 @@ import java.util.Arrays;
      * Here E is a type parameter, and it will be replaced with
         actual type when the object got created.
      */
+/**
+ * List class.
+ *
+ * @param      <E>   { parameter_description }
+ */
 public class List<E> {
     private E[] list;
     private int size;
@@ -35,6 +40,11 @@ public class List<E> {
      * Think about how you can use the size variable to add item
      * to the list.
      */
+    /**
+     * adds an item to the list.
+     *
+     * @param      item  The item
+     */
     public void add(E item) {
         //Inserts the specified element at the end of the list.
         //You can modify the code in this method.
@@ -42,6 +52,11 @@ public class List<E> {
     }
     /*Inserts all the elements of specified int
     array to the end of list*/
+    /**
+     * Adds all.
+     *
+     * @param      items  The items
+     */
     public void addAll(E[] items) {
         for (int i = 0; i < items.length; i++) {
             if (list.length == size) {
@@ -51,7 +66,7 @@ public class List<E> {
         }
     }
     /**
-     * { function_description }
+     * resize method.
      */
     private void resize() {
         E[] newList = ((E[]) new Object[list.length * 2]);
@@ -67,6 +82,11 @@ public class List<E> {
      * to the objects outside the list
      *
      * The method returns an int. Empty list should return 0.
+     */
+    /**
+     * size of the list.
+     *
+     * @return     { description_of_the_return_value }
      */
     public int size() {
         return size;
@@ -91,6 +111,11 @@ public class List<E> {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
+    /**
+     * Removes the element of given index.
+     *
+     * @param      index  The index
+     */
     public void remove(int index) {
         if (index >= 0 && index < size) {
             for (int i = index; i < size - 1; i++) {
@@ -111,6 +136,13 @@ public class List<E> {
      * in the list then that would mean the item doesn't exist.
      * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
+     */
+    /**
+     * Gets the element of the index.
+     *
+     * @param      index  The index
+     *
+     * @return     element in the list.
      */
     public E get(int index) {
         if (index < 0 || index >= size) {
