@@ -362,7 +362,7 @@ public class Solution {
      *
      * @param      stdin  The stdin
      */
-    public static void executeListString(Scanner stdin) {
+    public static void executeListString(final Scanner stdin) {
         List<String> l = new List();
         while (stdin.hasNext()) {
             // read the line
@@ -417,7 +417,7 @@ public class Solution {
                     l.removeAll(t2);
                 }
                 break;
-            case "subList": {
+            case "subList":
                 if (tokens.length != 2) {
                     break;
                 }
@@ -428,7 +428,6 @@ public class Solution {
                     System.out.println(object);
                 }
                 break;
-            }
             case "equals":
                 if (tokens.length == 2) {
                     String[] lt = tokens[1].split(",");
