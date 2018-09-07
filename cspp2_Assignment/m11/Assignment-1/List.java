@@ -334,14 +334,14 @@ public class List {
      *
      * @return     True/False.
      */
-    public boolean equals(List list ) {
-        if (this.size != list.size) {
+    public boolean equals(List array) {
+        if (this.size != array.size) {
             return false;
         }
         for (int i = 0; i < this.size; i++) {
             int count = 0;
-            for (int j = 0; j < list.size; j++) {
-                if (this.list[i] == list.list[j]) {
+            for (int j = 0; j < array.size; j++) {
+                if (this.list[i] == array.list[j]) {
                     count++;
                 }
             }
@@ -370,7 +370,7 @@ public class List {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -435,18 +435,22 @@ public class List {
                 if (tokens.length == 2) {
                     String[] t2 = tokens[1].split(",");
                     int[] a = new int[t2.length];
-                    for (int i = 0; i < t2.length; i++)
+                    for (int i = 0; i < t2.length; i++) {
                         a[i] = Integer.parseInt(t2[i]);
+                    }
                     l.removeAll(a);
                 }
                 break;
             case "subList": {
-                if (tokens.length != 2) break;
+                if (tokens.length != 2) {
+                    break;
+                }
                 String[] arrstring3 = tokens[1].split(",");
                 List object = l.subList(Integer.parseInt(arrstring3[0]),
                                         Integer.parseInt(arrstring3[1]));
-                if (object != null)
+                if (object != null) {
                     System.out.println(object);
+                }
                 break;
             }
             case "equals":
