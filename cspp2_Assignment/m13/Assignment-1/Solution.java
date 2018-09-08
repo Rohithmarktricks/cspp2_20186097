@@ -57,7 +57,7 @@ public Set retainAll(int[] array) {
     for (int i = 0; i < array.length; i++) {
         for (int j = 0; j<this.size(); j++) {
             if (array[i] == this.list[j]){
-                retain.add(this.list[i]);
+                retain.add(this.list[j]);
             }
         }
     } return retain;
@@ -82,7 +82,7 @@ public Set intersection(Set array) {
     for (int i = 0; i < array.size(); i++) {
         for (int j = 0; j<this.size(); j++) {
             if (array.list[i] == this.list[j]){
-                retain.add(this.list[i]);
+                retain.add(this.list[j]);
             }
         }
     } return retain;
