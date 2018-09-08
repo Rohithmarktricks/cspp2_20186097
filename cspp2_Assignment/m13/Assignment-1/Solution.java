@@ -11,21 +11,35 @@ class Set {
     private int[] list;
     private int size;
     private final int lIMIT = 100;
-
+    /**
+     * Constructs the object.
+     */
     public Set() {
         list = new int[lIMIT];
         size = 0;
     }
-
+    /**
+     * size of set.
+     *
+     * @return     size.
+     */
     public int size() {
         return size;
     }
-
+    /**
+     * adds the item to set.
+     *
+     * @param      item  The item
+     */
     public void add(int item) {
         list[size] = item;
         size++;
     }
-
+    /**
+     * adds the items[] to set.
+     *
+     * @param      items  The items
+     */
     public void add(int[] items) {
         int flag = 0;
         //int[] temp = Arrays.copyOf(list, list.length);
@@ -41,7 +55,13 @@ class Set {
         }
     }
 
-
+    /**
+     * Contains.
+     *
+     * @param      item  The item
+     *
+     * @return     true/false.
+     */
     public boolean contains(int item) {
         for (int element : list) {
             if (item == element) {
@@ -49,7 +69,13 @@ class Set {
             }
         } return false;
     }
-
+    /**
+     * retainAll
+     *
+     * @param      array  The array
+     *
+     * @return     Common elements.
+     */
     public Set retainAll(int[] array) {
         Set retain = new Set();
         for (int j = 0; j < this.size(); j++) {
@@ -60,7 +86,11 @@ class Set {
             }
         } return retain;
     }
-
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         // Replace the code below
         if (size == 0) {
@@ -73,7 +103,13 @@ class Set {
         str = str + list[size - 1] + "}";
         return str;
     }
-
+    /**
+     * intersection.
+     *
+     * @param      array  The array
+     *
+     * @return    Common elements.
+     */
     public Set intersection(Set array) {
         Set retain = new Set();
         int s = array.size();
