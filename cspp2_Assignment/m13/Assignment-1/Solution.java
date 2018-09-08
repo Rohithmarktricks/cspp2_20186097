@@ -123,20 +123,26 @@ class Set {
 
     }
 
-    /*public int[][] cartesianProduct(Set test) {
-        //Set s = new Set();
-        int[][] newarray = new int[20][20];
-        if (this.size() == 0 || test.size() == 0) {
+    public int[][] cartesianProduct(Set test) {
+        int limit = this.size* test.size();
+        int[][] result = new int[limit][2];
+        if (this.size == 0 || test.size() == 0) {
             return null;
         } else {
-            for (int j = 0; j < this.size(); j++) {
-                for (int i = 0; i < test.size(); i++) {
-                    newarray[j][i] = this.;
+            int m = 0;
+            for (int i = 0; i < this.size; i++) {
+                for (int j = 0; j < test.size; j++) {
+                    if (m < limit) {
+                        result[m][0] = this.list[i];
+                        result[m][1] = test.list[j];
+                        m += 1;
+                    }
                 }
             }
-        } return newarray;
 
-    }*/
+        }
+        return result;
+    }
 
 
 }
@@ -222,7 +228,7 @@ public final class Solution {
                 intArray = intArray(tokens[2]);
                 System.out.println(s.retainAll(intArray));
                 break;
-            /*case "cartesianProduct":
+            case "cartesianProduct":
                 s = new Set();
                 t = new Set();
                 intArray = intArray(tokens[1]);
@@ -230,7 +236,7 @@ public final class Solution {
                 intArray = intArray(tokens[2]);
                 t.add(intArray);
                 System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
-                break;*/
+                break;
             default:
                 break;
             }
