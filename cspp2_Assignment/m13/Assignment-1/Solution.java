@@ -8,13 +8,22 @@ import java.util.Arrays;
  * @author : RohithMarktricks.
  */
 class Set {
+    /**
+     * List.
+     */
     private int[] list;
+    /**
+     * size.
+     */
     private int size;
+    /**
+     * lIMIT.
+     */
     private final int lIMIT = 100;
     /**
      * Constructs the object.
      */
-    public Set() {
+    Set() {
         list = new int[lIMIT];
         size = 0;
     }
@@ -26,7 +35,7 @@ class Set {
     public int size() {
         return size;
     }
-    /**
+    /** 
      * adds the item to set.
      *
      * @param      item  The item
