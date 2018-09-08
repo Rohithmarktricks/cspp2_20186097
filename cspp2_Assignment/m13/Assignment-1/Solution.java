@@ -70,7 +70,7 @@ class Set {
         } return false;
     }
     /**
-     * retainAll
+     * retainAll.
      *
      * @param      array  The array
      *
@@ -124,14 +124,14 @@ class Set {
     }
 
     /*public int[][] cartesianProduct(Set test) {
-        Set s = new Set();
+        //Set s = new Set();
         int[][] newarray = new int[20][20];
         if (this.size() == 0 || test.size() == 0) {
             return null;
         } else {
             for (int j = 0; j < this.size(); j++) {
                 for (int i = 0; i < test.size(); i++) {
-                    newarray[j][i] = s.add
+                    newarray[j][i] = this.;
                 }
             }
         } return newarray;
