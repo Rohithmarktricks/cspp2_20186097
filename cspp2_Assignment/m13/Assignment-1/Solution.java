@@ -44,65 +44,65 @@ class Set {
     }
 
 
-public boolean contains(int item) {
-    for (int element : list) {
-        if (item == element) {
-            return true;
-        }
-    } return false;
-}
+    public boolean contains(int item) {
+        for (int element : list) {
+            if (item == element) {
+                return true;
+            }
+        } return false;
+    }
 
-public Set retainAll(int[] array) {
-    Set retain = new Set();
-    for (int i = 0; i < array.length; i++) {
-        for (int j = 0; j<this.size(); j++) {
-            if (array[i] == this.list[j]){
-                retain.add(this.list[j]);
+    public Set retainAll(int[] array) {
+        Set retain = new Set();
+        for (int j = 0; j < this.size(); j++) {
+            for (int i = 0; i < array.length; i++) {
+                if (array[i] == this.list[j]) {
+                    retain.add(this.list[j]);
+                }
+            }
+        } return retain;
+    }
+
+    public String toString() {
+        // Replace the code below
+        if (size == 0) {
+            return "{}";
+        }
+        String str = "{";
+        for (int i = 0; i < size - 1; i++) {
+            str = str + list[i] + ", ";
+        }
+        str = str + list[size - 1] + "}";
+        return str;
+    }
+
+    public Set intersection(Set array) {
+        Set retain = new Set();
+        int s = array.size();
+        for (int j = 0; j < this.size(); j++) {
+            for (int i = 0; i < array.size(); i++) {
+                if (array.list[i] == this.list[j]) {
+                    retain.add(this.list[j]);
+                }
+            }
+        } return retain;
+
+    }
+
+    /*public int[][] cartesianProduct(Set test){
+        int[][] newarray = new int[20][20];
+        if (this.size() == 0 || test.size() == 0){
+            return null;
+        } else {
+            for(int j = 0; j < this.size(); j++){
+            for (int i = 0; i < test.size(); i++){
+                newarray[j][i] = test[i];
             }
         }
-    } return retain;
-}
+        } return newarray;
 
-public String toString() {
-    // Replace the code below
-    if (size == 0) {
-        return "{}";
     }
-    String str = "{";
-    for (int i = 0; i < size - 1; i++) {
-        str = str + list[i] + ", ";
-    }
-    str = str + list[size - 1] + "}";
-    return str;
-}
-
-public Set intersection(Set array) {
-    Set retain = new Set();
-    int s = array.size();
-    for (int i = 0; i < array.size(); i++) {
-        for (int j = 0; j<this.size(); j++) {
-            if (array.list[i] == this.list[j]){
-                retain.add(this.list[j]);
-            }
-        }
-    } return retain;
-    
-}
-
-/*public int[][] cartesianProduct(Set test){
-    int[][] newarray = new int[20][20];
-    if (this.size() == 0 || test.size() == 0){
-        return null;
-    } else {
-        for(int j = 0; j < this.size(); j++){
-        for (int i = 0; i < test.size(); i++){
-            newarray[j][i] = test[i];
-        }
-    }
-    } return newarray;
-
-}
-*/
+    */
 
 }
 /**
