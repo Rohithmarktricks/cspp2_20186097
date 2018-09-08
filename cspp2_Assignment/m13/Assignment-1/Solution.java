@@ -54,9 +54,11 @@ public boolean contains(int item) {
 
 public Set retainAll(int[] array) {
     Set retain = new Set();
-    for (int element : array) {
-        if (!contains(element)) {
-            retain.add(element);
+    for (int i = 0; i < array.length; i++) {
+        for (int j = 0; j<this.size(); j++) {
+            if (array[i] == this.list[j]){
+                retain.add(array[i]);
+            }
         }
     } return retain;
 }
