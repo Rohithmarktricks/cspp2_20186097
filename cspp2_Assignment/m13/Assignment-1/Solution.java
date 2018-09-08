@@ -35,12 +35,12 @@ class Set {
     public int size() {
         return size;
     }
-    /** 
+    /**
      * adds the item to set.
      *
      * @param      item  The item
      */
-    public void add(int item) {
+    public void add(final int item) {
         list[size] = item;
         size++;
     }
@@ -49,7 +49,7 @@ class Set {
      *
      * @param      items  The items
      */
-    public void add(int[] items) {
+    public void add(final int[] items) {
         int flag = 0;
         //int[] temp = Arrays.copyOf(list, list.length);
         for (int j = 0; j <= items.length - 1; j++) {
@@ -71,7 +71,7 @@ class Set {
      *
      * @return     true/false.
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         for (int element : list) {
             if (item == element) {
                 return true;
@@ -85,7 +85,7 @@ class Set {
      *
      * @return     Common elements.
      */
-    public Set retainAll(int[] array) {
+    public Set retainAll(final int[] array) {
         Set retain = new Set();
         for (int j = 0; j < this.size(); j++) {
             for (int i = 0; i < array.length; i++) {
@@ -119,7 +119,7 @@ class Set {
      *
      * @return    Common elements.
      */
-    public Set intersection(Set array) {
+    public Set intersection(final Set array) {
         Set retain = new Set();
         int s = array.size();
         for (int j = 0; j < this.size(); j++) {
@@ -131,9 +131,15 @@ class Set {
         } return retain;
 
     }
-
-    public int[][] cartesianProduct(Set test) {
-        int limit = this.size* test.size();
+    /**
+     * Cartesian Product.
+     *
+     * @param      test  The test
+     *
+     * @return     cartesian Product.
+     */
+    public int[][] cartesianProduct(final Set test) {
+        int limit = this.size() * test.size();
         int[][] result = new int[limit][2];
         if (this.size == 0 || test.size() == 0) {
             return null;
