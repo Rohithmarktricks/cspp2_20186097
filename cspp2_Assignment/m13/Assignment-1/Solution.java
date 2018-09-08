@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 /**
  * Class for set.
- * @author :
+ * @author : RohithMarktricks.
  */
 class Set {
     private int[] list;
@@ -89,20 +89,21 @@ class Set {
 
     }
 
-    /*public int[][] cartesianProduct(Set test){
+    /*public int[][] cartesianProduct(Set test) {
+        Set s = new Set();
         int[][] newarray = new int[20][20];
-        if (this.size() == 0 || test.size() == 0){
+        if (this.size() == 0 || test.size() == 0) {
             return null;
         } else {
-            for(int j = 0; j < this.size(); j++){
-            for (int i = 0; i < test.size(); i++){
-                newarray[j][i] = test[i];
+            for (int j = 0; j < this.size(); j++) {
+                for (int i = 0; i < test.size(); i++) {
+                    newarray[j][i] = s.add
+                }
             }
-        }
         } return newarray;
 
-    }
-    */
+    }*/
+
 
 }
 /**
