@@ -1,9 +1,7 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
-//import java.util.Set;
-import java.util.List;
-import java.util.ArrayList;
+
 
 /**
  * Class for set.
