@@ -76,18 +76,18 @@ public String toString() {
     return str;
 }
 
-/*public Set intersection(Set array) {
+public Set intersection(Set array) {
+    Set retain = new Set();
     int s = array.size();
-    List<Integer> numberList = new ArrayList<>(s);
-    for (Integer i : array){
-        numberList.add(i);
-    }
-    Integer[] numbers = numberList.toArray(new Integer[numberList.size()]);
-    int[] hello = new int[100];
-    for (int i = 0; i< numbers.length; i++){
-        hello[i] = numbers[i].intValue();
-    } return this.retainAll(hello);
-}*/
+    for (int i = 0; i < array.size(); i++) {
+        for (int j = 0; j<this.size(); j++) {
+            if (array.list[i] == this.list[j]){
+                retain.add(array.list[i]);
+            }
+        }
+    } return retain;
+    
+}
 
 /*public int[][] cartesianProduct(Set test){
     int[][] newarray = new int[20][20];
@@ -171,7 +171,7 @@ public final class Solution {
                     s.add(intArray);
                 }
                 break;
-            /*case "intersection":
+            case "intersection":
                 s = new Set();
                 Set t = new Set();
                 intArray = intArray(tokens[1]);
@@ -179,7 +179,7 @@ public final class Solution {
                 intArray = intArray(tokens[2]);
                 t.add(intArray);
                 System.out.println(s.intersection(t));
-                break;*/
+                break;
             case "retainAll":
                 s = new Set();
                 intArray = intArray(tokens[1]);
