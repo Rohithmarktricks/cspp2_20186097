@@ -1,15 +1,26 @@
 import java.util.Arrays;
 import java.util.Scanner;
 import java.io.BufferedInputStream;
-
+/**
+ * Class for sorted set.
+ */
 class SortedSet extends Set {
 
 
-    //constructor
+    /**
+     * Constructs the object.
+     */
     SortedSet() {
+        /**
+         * Refers the the Parent class constructor.
+         */
         super();
     }
-
+    /**
+     * adds an element to the array.
+     *
+     * @param      item  The item
+     */
     @Override
     public void add(final int item) {
         if (this.size() == this.getarraylength() - 1) {
@@ -21,7 +32,11 @@ class SortedSet extends Set {
         }
 
     }
-
+    /**
+     * insert an item in the array.
+     *
+     * @param      item  The item
+     */
     public void insert(int item) {
         int reqindex = 0;
         for (int i = this.size() - 1; i >= 0 ; i--) {
@@ -43,14 +58,25 @@ class SortedSet extends Set {
         this.sizeinc();
 
     }
-
+    /**
+     * Adds all.
+     *
+     * @param      ele   The ele
+     */
     public void addAll(int[] ele) {
         for (int i : ele) {
             this.add(i);
         }
     }
 
-
+    /**
+     * subSet of the Set.
+     *
+     * @param      start  The start
+     * @param      end    The end
+     *
+     * @return     int[] array.
+     */
     public int[] subSet(int start, int end) {
         if (start > end) {
             System.out.println("Invalid Arguments to Subset Exception");
@@ -78,7 +104,13 @@ class SortedSet extends Set {
 
         return result;
     }
-
+    /**
+     * headSet method.
+     *
+     * @param      ele   The ele
+     *
+     * @return     headSet.
+     */
     public int[] headSet(int ele) {
         if (ele <= get(0)) {
             return new int[] {};
@@ -94,7 +126,11 @@ class SortedSet extends Set {
         return Arrays.copyOf(getArray(), i);
 
     }
-
+    /**
+     * last element.
+     *
+     * @return     last element.
+     */
     public int last() {
         if (this.size() == 0) {
             System.out.println("Set Empty Exception");
