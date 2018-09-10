@@ -113,18 +113,18 @@ class SortedSet extends Set {
     /**
      * headSet method.
      *
-     * @param      ele   The ele
+     * @param      element  The ele
      *
      * @return     headSet.
      */
-    public int[] headSet(final int ele) {
-        if (ele <= get(0)) {
+    public int[] headSet(final int element) {
+        if (element <= get(0)) {
             return new int[] {};
         }
 
         int i = 0;
         for (; i < size(); i++) {
-            if (get(i) >= ele) {
+            if (get(i) >= element) {
                 break;
             }
         }
