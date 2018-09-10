@@ -37,9 +37,9 @@ class SortedSet extends Set {
      *
      * @param      item  The item
      */
-    public void insert(int item) {
+    public void insert(final int item) {
         int reqindex = 0;
-        for (int i = this.size() - 1; i >= 0 ; i--) {
+        for (int i = this.size() - 1; i >= 0; i--) {
             if (this.get(i) < item) {
                 reqindex = i + 1;
                 break;
