@@ -170,12 +170,15 @@ public final class Solution {
                 intArray = intArray(tokens[1]);
                 int[] t = s.subSet(intArray[0], intArray[1]);
                 if (t != null) {
-                    System.out.println(Arrays.toString(t).replace("[", "{").replace("]", "}"));
+                    System.out.println(Arrays.toString(t).
+                                       replace("[", "{").replace("]", "}"));
                 }
                 break;
             case "headSet":
                 intArray = intArray(tokens[1]);
-                System.out.println(Arrays.toString(s.headSet(intArray[0])).replace("[", "{").replace("]", "}"));
+                System.out.println(Arrays.toString(
+                                       s.headSet(intArray[0])).replace
+                                   ("[", "{").replace("]", "}"));
                 break;
             case "last":
                 System.out.println(s.last());
