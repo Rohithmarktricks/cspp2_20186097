@@ -48,7 +48,7 @@ class SortedSet extends Set {
 
         /*int temp = (size() == 0) ? 0 : this.get(reqindex);*/
         int temp = 0;
-        if(size() == 0){
+        if (size() == 0) {
             temp = 0;
         } else {
             temp = this.get(reqindex);
@@ -69,7 +69,7 @@ class SortedSet extends Set {
      *
      * @param      ele   The ele
      */
-    public void addAll(int[] ele) {
+    public void addAll(final int[] ele) {
         for (int i : ele) {
             this.add(i);
         }
@@ -83,7 +83,7 @@ class SortedSet extends Set {
      *
      * @return     int[] array.
      */
-    public int[] subSet(int start, int end) {
+    public int[] subSet(final int start, final int end) {
         if (start > end) {
             System.out.println("Invalid Arguments to Subset Exception");
             return null;
@@ -117,7 +117,7 @@ class SortedSet extends Set {
      *
      * @return     headSet.
      */
-    public int[] headSet(int ele) {
+    public int[] headSet(final int ele) {
         if (ele <= get(0)) {
             return new int[] {};
         }
