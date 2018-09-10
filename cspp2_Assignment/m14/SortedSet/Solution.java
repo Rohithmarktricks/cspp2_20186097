@@ -46,7 +46,13 @@ class SortedSet extends Set {
             }
         }
 
-        int temp = (size() == 0) ? 0 : this.get(reqindex);
+        /*int temp = (size() == 0) ? 0 : this.get(reqindex);*/
+        int temp = 0;
+        if(size() == 0){
+            temp = 0;
+        } else {
+            temp = this.get(reqindex);
+        }
         for (int i = reqindex; i < size() + 1; i++) {
             int tmp2 = this.get(i + 1);
             this.arraysetter(temp, i + 1);
