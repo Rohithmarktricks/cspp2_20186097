@@ -162,9 +162,11 @@ public class List {
      *
      */
     /**
-     * removes an element from list.
+     * remove method.
      *
-     * @param      index  The index
+     * @param      index                     The index
+     *
+     * @throws     InvalidPositionException  invalid position.
      */
     public void remove(final int index) throws InvalidPositionException {
         // write the logic for remove here. Think about what to do to the size
@@ -302,7 +304,9 @@ public class List {
     /**
      * Removes all.
      *
-     * @param      newArray  The new array
+     * @param      newArray                  The new array
+     *
+     * @throws     InvalidPositionException  Invalid Position.
      */
     public void removeAll(final int[] newArray) throws InvalidPositionException {
         //int[] temp = Arrays.copyOf(list, list.length);
@@ -325,12 +329,14 @@ public class List {
     and also if start is greater than end.
     */
     /**
-     * subList generator.
+     * subList method.
      *
-     * @param      start  The start index.
-     * @param      end    The end index.
+     * @param      start                      The start
+     * @param      end                        The end
      *
      * @return     List.
+     *
+     * @throws     IndexOutOfBoundsException    IndexOutOfBoundsException
      */
     public List subList(final int start, final int end) throws IndexOutOfBoundsException {
         if (start < 0 || end < 0 || start > end || size == 0) {
