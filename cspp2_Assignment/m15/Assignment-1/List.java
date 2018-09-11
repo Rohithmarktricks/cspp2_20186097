@@ -308,7 +308,8 @@ public class List {
      *
      * @throws     InvalidPositionException  Invalid Position.
      */
-    public void removeAll(final int[] newArray) throws InvalidPositionException {
+    public void removeAll(final int[] newArray)
+    throws InvalidPositionException {
         //int[] temp = Arrays.copyOf(list, list.length);
         for (int n : newArray) {
             for (int i = 0; i < size; i++) {
@@ -338,7 +339,8 @@ public class List {
      *
      * @throws     IndexOutOfBoundsException    IndexOutOfBoundsException
      */
-    public List subList(final int start, final int end) throws IndexOutOfBoundsException {
+    public List subList(final int start,
+                        final int end) throws IndexOutOfBoundsException {
         if (start < 0 || end < 0 || start > end || size == 0) {
             throw new IndexOutOfBoundsException();
         }
@@ -389,7 +391,7 @@ public class List {
      *
      * @return     count of the element in the list.
      */
-    public int count(int x) {
+    public int count(final int x) {
         int c = 0;
         for (int y : this.list) {
             if (x == y) {
