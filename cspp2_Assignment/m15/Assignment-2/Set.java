@@ -50,7 +50,7 @@ public class Set {
     }
 
 
-    public void sizeinc(){
+    public void sizeinc() {
         this.size++;
     }
 
@@ -134,17 +134,17 @@ public class Set {
         }
     }
 
-    public void arraysetter(int item,int index) {
+    public void arraysetter(int item, int index) {
         this.array[index] = item;
     }
 
-    
+
     public int getarraylength() {
         return this.array.length;
     }
 
     public int[] getArray() {
-        return Arrays.copyOf(this.array,this.size);
+        return Arrays.copyOf(this.array, this.size);
     }
 
 

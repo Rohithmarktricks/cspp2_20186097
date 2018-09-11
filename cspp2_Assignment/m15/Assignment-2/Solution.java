@@ -2,12 +2,28 @@ import java.util.Arrays;
 import java.util.Scanner;
 import java.io.BufferedInputStream;
 
+/**
+ * Exception for signaling invalid subset selection errors.
+ */
 class InvalidSubsetSelectionException extends Exception {
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         return "Invalid Arguments to Subset Exception";
     }
 }
+/**
+ * Exception for signaling set empty errors.
+ */
 class SetEmptyException extends Exception {
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         return "Set Empty Exception";
     }
@@ -84,12 +100,25 @@ class SortedSet extends Set {
         }
     }
 
+    /**
+     * Intersection method.
+     *
+     * @param      array  The array
+     *
+     * @return     { description_of_the_return_value }
+     */
     public Set intersection(final Set array) {
         return this.retainAll(array.getArray());
     }
-
+    /**
+     * RetainAll method.
+     *
+     * @param      array  The array
+     *
+     * @return     { description_of_the_return_value }
+     */
     public Set RetainAll(final int[] array) {
-        if(this.getArray().length == 0 || array.length == 0){
+        if (this.getArray().length == 0 || array.length == 0) {
             return new Set() ;
         }
         Set retain = new Set();
@@ -102,12 +131,14 @@ class SortedSet extends Set {
         } return retain;
     }
     /**
-     * subSet of the Set.
+     * subSet method.
      *
-     * @param      start  The start
-     * @param      end    The end
+     * @param      start                            The start
+     * @param      end                              The end
      *
-     * @return     int[] array.
+     * @return     int array.
+     *
+     * @throws     InvalidSubsetSelectionException  invalid subset.
      */
     public int[] subSet(final int start, final int end) throws InvalidSubsetSelectionException {
         if (start > end) {
@@ -138,9 +169,11 @@ class SortedSet extends Set {
     /**
      * headSet method.
      *
-     * @param      element  The ele
+     * @param      element            The element
      *
-     * @return     headSet.
+     * @return     int array.
+     *
+     * @throws     SetEmptyException  set empty exception.
      */
     public int[] headSet(final int element) throws SetEmptyException {
         if (element <= get(0)) {
