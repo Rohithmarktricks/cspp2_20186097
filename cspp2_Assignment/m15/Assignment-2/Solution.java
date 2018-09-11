@@ -140,8 +140,7 @@ class SortedSet extends Set {
      *
      * @throws     InvalidSubsetSelectionException  invalid subset.
      */
-    public int[] subSet(final int start, final int end)
-    throws InvalidSubsetSelectionException {
+    public int[] subSet(final int start, final int end) throws InvalidSubsetSelectionException {
         if (start > end) {
             throw new InvalidSubsetSelectionException();
         }
@@ -192,11 +191,9 @@ class SortedSet extends Set {
 
     }
     /**
-     * last element of the Sorted Set.
+     * last element.
      *
-     * @return     integer value.
-     *
-     * @throws     SetEmptyException  set empty exception.
+     * @return     last element.
      */
     public int last() throws SetEmptyException {
         if (this.size() == 0) {
