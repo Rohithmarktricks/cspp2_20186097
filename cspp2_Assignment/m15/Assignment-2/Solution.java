@@ -117,9 +117,9 @@ class SortedSet extends Set {
      *
      * @return     { description_of_the_return_value }
      */
-    public Set RetainAll(final int[] array) {
+    public Set retainAll(final int[] array) {
         if (this.getArray().length == 0 || array.length == 0) {
-            return new Set() ;
+            return new Set();
         }
         Set retain = new Set();
         for (int j = 0; j < this.size(); j++) {
@@ -140,7 +140,8 @@ class SortedSet extends Set {
      *
      * @throws     InvalidSubsetSelectionException  invalid subset.
      */
-    public int[] subSet(final int start, final int end) throws InvalidSubsetSelectionException {
+    public int[] subSet(final int start, final int end)
+    throws InvalidSubsetSelectionException {
         if (start > end) {
             throw new InvalidSubsetSelectionException();
         }
@@ -191,9 +192,11 @@ class SortedSet extends Set {
 
     }
     /**
-     * last element.
+     * last element of the Sorted Set.
      *
-     * @return     last element.
+     * @return     integer value.
+     *
+     * @throws     SetEmptyException  set empty exception.
      */
     public int last() throws SetEmptyException {
         if (this.size() == 0) {
