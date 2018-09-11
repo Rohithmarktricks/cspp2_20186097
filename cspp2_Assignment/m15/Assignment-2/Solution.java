@@ -245,8 +245,8 @@ public final class Solution {
                 }
                 break;
             case "intersection":
-                Set s1 = new Set();
-                Set t = new Set();
+                SortedSet s1 = new SortedSet();
+                SortedSet t = new SortedSet();
                 intArray = intArray(tokens[1]);
                 s1.add(intArray);
                 intArray = intArray(tokens[2]);
@@ -254,7 +254,7 @@ public final class Solution {
                 System.out.println(s1.intersection(t));
                 break;
             case "retainAll":
-                Set s2 = new Set();
+                SortedSet s2 = new SortedSet();
                 intArray = intArray(tokens[1]);
                 s2.add(intArray);
                 intArray = intArray(tokens[2]);
