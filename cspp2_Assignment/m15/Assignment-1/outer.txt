@@ -1,0 +1,103 @@
+########## Testcase 0: Failed ##########
+Expected Output: 
+2
+[5,-1,0,99]
+[-1,0]
+[0,99]
+Index Out of Bounds Exception
+false
+true
+4
+[5,-1,0,99]
+Invalid Position Exception
+[]
+
+Your Output: 
+2
+[5,-1,0,99]
+[-1,0]
+[0,99]
+Index Out Of Bounds Exception
+false
+true
+4
+[5,-1,0,99]
+Invalid Position Exception
+[]
+
+----------------------------------------
+########## Testcase 1: Failed ##########
+Expected Output: 
+2
+[1,-1]
+Index Out of Bounds Exception
+true
+6
+[1,-1,0,0,0,-1]
+0
+[]
+
+Your Output: 
+2
+[1,-1]
+Index Out Of Bounds Exception
+true
+6
+[1,-1,0,0,0,-1]
+0
+[]
+
+----------------------------------------
+########## Testcase 2: Failed ##########
+Expected Output: 
+Index Out of Bounds Exception
+Index Out of Bounds Exception
+Index Out of Bounds Exception
+0
+[]
+[]
+0
+false
+[1,2,3,4]
+false
+[1,2,3,4,1,2]
+2
+2
+
+Your Output: 
+Index Out Of Bounds Exception
+Index Out Of Bounds Exception
+Index Out Of Bounds Exception
+0
+[]
+[]
+0
+false
+[1,2,3,4]
+false
+[1,2,3,4,1,2]
+2
+2
+
+----------------------------------------
+Result: 0/3 testcases passed.
+Starting audit...
+[ERROR] /home/rohith/Documents/cspp2_20186097/cspp2_Assignment/m15/Assignment-1/List.java:3:8: Unused import - java.util.Arrays. [UnusedImports]
+[ERROR] /home/rohith/Documents/cspp2_20186097/cspp2_Assignment/m15/Assignment-1/List.java:5: Missing a Javadoc comment. [JavadocType]
+[ERROR] /home/rohith/Documents/cspp2_20186097/cspp2_Assignment/m15/Assignment-1/List.java:6:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] /home/rohith/Documents/cspp2_20186097/cspp2_Assignment/m15/Assignment-1/List.java:162:48: Expected @throws tag for 'InvalidPositionException'. [JavadocMethod]
+[ERROR] /home/rohith/Documents/cspp2_20186097/cspp2_Assignment/m15/Assignment-1/List.java:300: Line is longer than 80 characters (found 81). [LineLength]
+[ERROR] /home/rohith/Documents/cspp2_20186097/cspp2_Assignment/m15/Assignment-1/List.java:300:56: Expected @throws tag for 'InvalidPositionException'. [JavadocMethod]
+[ERROR] /home/rohith/Documents/cspp2_20186097/cspp2_Assignment/m15/Assignment-1/List.java:328: Line is longer than 80 characters (found 90). [LineLength]
+[ERROR] /home/rohith/Documents/cspp2_20186097/cspp2_Assignment/m15/Assignment-1/List.java:328:64: Expected @throws tag for 'IndexOutOfBoundsException'. [JavadocMethod]
+[ERROR] /home/rohith/Documents/cspp2_20186097/cspp2_Assignment/m15/Assignment-1/List.java:379:22: Parameter x should be final. [FinalParameters]
+Audit done.
+Checkstyle ends with 9 errors.
+
+
+[master 88536e1] "check_style_score -> 0 of 3 passed. style score: 0/1 "
+ 2 files changed, 1 insertion(+), 1 deletion(-)
+ delete mode 100644 cspp2_Assignment/m15/Assignment-1/out.txt
+
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
