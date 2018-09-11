@@ -1,8 +1,15 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-import java.util.Arrays;
 
+/**
+ * Exception for signaling invalid position errors.
+ */
 class InvalidPositionException extends Exception {
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         return "Invalid Position Exception";
     }
