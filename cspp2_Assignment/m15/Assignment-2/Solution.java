@@ -107,29 +107,6 @@ class SortedSet extends Set {
      *
      * @return     { description_of_the_return_value }
      */
-    public Set intersection(final Set array) {
-        return this.retainAll(array.getArray());
-    }
-    /**
-     * RetainAll method.
-     *
-     * @param      array  The array
-     *
-     * @return     { description_of_the_return_value }
-     */
-    public Set retainAll(final int[] array) {
-        if (this.getArray().length == 0 || array.length == 0) {
-            return new Set();
-        }
-        Set retain = new Set();
-        for (int j = 0; j < this.size(); j++) {
-            for (int i = 0; i < array.length; i++) {
-                if (array[i] == this.get(array[j])) {
-                    retain.add(this.get(array[j]));
-                }
-            }
-        } return retain;
-    }
     /**
      * subSet method.
      *
