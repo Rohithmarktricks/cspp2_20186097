@@ -89,6 +89,9 @@ class SortedSet extends Set {
     }
 
     public Set RetainAll(final int[] array) {
+        if(this.getArray().length == 0 || array.length == 0){
+            return new Set() ;
+        }
         Set retain = new Set();
         for (int j = 0; j < this.size(); j++) {
             for (int i = 0; i < array.length; i++) {
@@ -245,17 +248,17 @@ public final class Solution {
                 Set s1 = new Set();
                 Set t = new Set();
                 intArray = intArray(tokens[1]);
-                s.add(intArray);
+                s1.add(intArray);
                 intArray = intArray(tokens[2]);
                 t.add(intArray);
-                System.out.println(s.intersection(t));
+                System.out.println(s1.intersection(t));
                 break;
             case "retainAll":
                 Set s2 = new Set();
                 intArray = intArray(tokens[1]);
-                s.add(intArray);
+                s2.add(intArray);
                 intArray = intArray(tokens[2]);
-                System.out.println(s.retainAll(intArray));
+                System.out.println(s2.retainAll(intArray));
                 break;
             case "headSet":
                 intArray = intArray(tokens[1]);
