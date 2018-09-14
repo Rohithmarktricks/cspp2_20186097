@@ -172,7 +172,8 @@ class ShoppingCart {
 
     }
     public void printInvoice() {
-        System.out.println("Name    quantity    Price");
+        //System.out.println("Name    quantity    Price");
+        System.out.println("Name   quantity   Price");
         for(Item item : cart){
             System.out.println(item);
         }
