@@ -89,6 +89,7 @@ class Item {
 }
 class ShoppingCart {
     private double discount = 0;
+    private boolean flag = true;
     ArrayList<Item> catalog = new ArrayList<>();
     ArrayList<Item> cart = new ArrayList<>();
 
@@ -162,8 +163,15 @@ class ShoppingCart {
             System.out.println("Invalid coupon");
             return;
         }
-        double amount = this.getTotalAmount();
-        this.discount = (amount * coupon) / 100;
+        /*double amount = this.getTotalAmount();
+        this.discount = (amount * coupon) / 100;*/
+        if (this.flag) {
+            double amount = this.getTotalAmount();
+            final double denom = 100;
+            this.discount = (amount * coupon) / denom;
+            //System.out.println(this.discount);
+            this.flag = false;
+        }
 
     }
     public double getPayableAmount() {
