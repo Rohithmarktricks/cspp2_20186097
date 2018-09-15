@@ -88,6 +88,7 @@ public final class Solution {
 			quiz.correctAnswer[i] = Integer.parseInt(tokens[2]);
 			quiz.marks[i] = Integer.parseInt(tokens[3]);
 			quiz.negMarks[i] = Integer.parseInt(tokens[4]);
+			System.out.println(questionCount+"are added to the quiz");
 
 		}
 	}
@@ -104,12 +105,14 @@ public final class Solution {
 		// read the user responses from the console
 		// store the user respones in the quiz object
 		for (int i = 0; i < answerCount; i++) {
-			System.out.println(quiz.questions[i]);
+			System.out.println(quiz.questions[i]+"("+i+")");
 			String[] tokens_ans = s.nextLine().split(" ");
 			quiz.userAnswers[i] = Integer.parseInt(tokens_ans[1]);
 			if (quiz.userAnswers[i] == quiz.correctAnswer[i]) {
+				System.out.println("Correct Answer! - Marks Awarded: "+ quiz.marks[i]);
 				quiz.userMarks += quiz.marks[i];
 			} else {
+				System.out.println("Wrong Answer! - Penality: "+quiz.negMarks[i]);
 				quiz.userMarks += quiz.negMarks[i];
 			}
 		}
