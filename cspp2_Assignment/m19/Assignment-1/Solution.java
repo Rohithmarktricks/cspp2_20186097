@@ -108,11 +108,13 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
+        final int three = 3;
+        final int five = 5;
         quiz.questionCount1 = questionCount;
         if (questionCount != 0) {
             for (int i = 0; i < questionCount; i++) {
                 String[] tokens = s.nextLine().split(":");
-                if (tokens.length == 5) {
+                if (tokens.length == five) {
                     quiz.questions[i] = tokens[0];
                     String[] tokensChoices = tokens[1].split(",");
                     for (int j = 0; j < quiz.questionCount1; j++) {
