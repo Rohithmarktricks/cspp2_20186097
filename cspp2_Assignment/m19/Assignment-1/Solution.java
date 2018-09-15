@@ -13,7 +13,7 @@ class Quiz {
     /**
      * questions.
      */
-    String[] questions = new String[100];
+    public String[] questions = new String[100];
     /**
      * choices.
      */
