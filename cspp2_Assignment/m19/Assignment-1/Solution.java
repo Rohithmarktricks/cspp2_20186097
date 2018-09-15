@@ -18,6 +18,7 @@ class Quiz {
     int[] negMarks = new int[100];
     int userMarks = 0;
     int answerCount1 = 0;
+    int questionCount1 = 0;
 }
 /**
  * Solution class for code-eval.
@@ -81,18 +82,27 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
-        for (int i = 0; i < questionCount; i++) {
-            String[] tokens = s.nextLine().split(":");
-            quiz.questions[i] = tokens[0];
-            String[] tokens_choices = tokens[1].split(",");
-            for (int j = 0; j < 4; j++) {
-                quiz.choices[i][j] = tokens_choices[j];
+        quiz.questionCount1 = questionCount;
+        if (questionCount != 0) {
+            for (int i = 0; i < questionCount; i++) {
+                String[] tokens = s.nextLine().split(":");
+                if (tokens.length == 5) {
+                    quiz.questions[i] = tokens[0];
+                    String[] tokens_choices = tokens[1].split(",");
+                    for (int j = 0; j < 4; j++) {
+                        quiz.choices[i][j] = tokens_choices[j];
+                    }
+                    quiz.correctAnswer[i] = Integer.parseInt(tokens[2]);
+                    quiz.marks[i] = Integer.parseInt(tokens[3]);
+                    quiz.negMarks[i] = Integer.parseInt(tokens[4]);
+                } else {
+                    System.out.println("Error! Malformed question");
+                }
             }
-            quiz.correctAnswer[i] = Integer.parseInt(tokens[2]);
-            quiz.marks[i] = Integer.parseInt(tokens[3]);
-            quiz.negMarks[i] = Integer.parseInt(tokens[4]);
+            System.out.println(questionCount + " are added to the quiz");
+        } else {
+            System.out.println("Quiz does not have questions");
         }
-        System.out.println(questionCount + " are added to the quiz");
     }
 
     /**
@@ -106,15 +116,17 @@ public final class Solution {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
-        quiz.answerCount1 = answerCount;
-        for (int i = 0; i < answerCount; i++) {
-            System.out.println(quiz.questions[i] + "(" + (i + 1) + ")");
-            System.out.println(quiz.choices[i][0] + "\t" + quiz.choices[i][1] + "\t" + quiz.choices[i][2] + "\t" + quiz.choices[i][3]);
-            System.out.println();
-        }
-        for (int i = 0; i < quiz.answerCount1; i++) {
-            String[] tokens_ans = s.nextLine().replace(" ", ",").split(",");
-            quiz.userAnswers[i] = Integer.parseInt(tokens_ans[1]);
+        if (quiz.questionCount1 != 0) {
+            quiz.answerCount1 = answerCount;
+            for (int i = 0; i < answerCount; i++) {
+                System.out.println(quiz.questions[i] + "(" + (i + 1) + ")");
+                System.out.println(quiz.choices[i][0] + "\t" + quiz.choices[i][1] + "\t" + quiz.choices[i][2] + "\t" + quiz.choices[i][3]);
+                System.out.println();
+            }
+            for (int i = 0; i < quiz.answerCount1; i++) {
+                String[] tokens_ans = s.nextLine().replace(" ", ",").split(",");
+                quiz.userAnswers[i] = Integer.parseInt(tokens_ans[1]);
+            }
         }
     }
 
@@ -125,17 +137,10 @@ public final class Solution {
      */
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report
-        Scanner s = new Scanner(System.in);
-        for (int i = 0; i < quiz.answerCount1; i++) {
-            /*String[] tokens_ans = s.nextLine().replace(" ", ",").split(",");
-            System.out.println(tokens_ans);*/
-            /*quiz.userAnswers[i] = Integer.parseInt(tokens_ans[1]);*/
-            for (int j = 1 ; j < 5; j++ ) {
-                if (i < 4) {
-                    System.out.println("question text " + (j));
-                } else {
-                    j = 1;
-                }
+        if (quiz.questionCount1 != 0) {
+            Scanner s = new Scanner(System.in);
+            for (int i = 0; i < quiz.answerCount1; i++) {
+                System.out.println("question text " + (i + 1));
                 if (quiz.userAnswers[i] == quiz.correctAnswer[i]) {
                     System.out.println(" Correct Answer! - Marks Awarded: " + quiz.marks[i]);
                     quiz.userMarks += quiz.marks[i];
@@ -144,7 +149,7 @@ public final class Solution {
                     quiz.userMarks += quiz.negMarks[i];
                 }
             }
+            System.out.println("Total Score: " + quiz.userMarks);
         }
-        System.out.println("Total Score: " + quiz.userMarks);
     }
 }
