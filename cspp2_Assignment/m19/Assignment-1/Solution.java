@@ -4,29 +4,33 @@ import java.util.Scanner;
  */
 class Quiz {
     /**
+     * index limit.
+     */
+    final int index = 100;
+    /**
      * questions.
      */
-    String[] questions = new String[100];
+    String[] questions = new String[index];
     /**
      * choices.
      */
-    String[][] choices = new String[100][100];
+    String[][] choices = new String[index][index];
     /**
      * correctAnswers.
      */
-    int[] correctAnswer = new int[100];
+    int[] correctAnswer = new int[index];
     /**
      * userAnswers.
      */
-    int[] userAnswers = new int[100];
+    int[] userAnswers = new int[index];
     /**
      * marks.
      */
-    int[] marks = new int[100];
+    int[] marks = new int[index];
     /**
      * negMarks.
      */
-    int[] negMarks = new int[100];
+    int[] negMarks = new int[index];
     /**
      * userMarks.
      */
