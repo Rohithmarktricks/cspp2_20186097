@@ -10,12 +10,13 @@ class Quiz {
 	ArrayList<Integer> negMarks = new ArrayList<>();*/
 	//int answerCount = 0;
 	String[] questions = new String[100];
-	String[] choices = new String[100];
+	String[][] choices = new String[100][100];
 	int[] correctAnswer = new int[100];
 	int[] userAnswers = new int[100];
 	int[] marks = new int[100];
 	int[] negMarks = new int[100];
 	int userMarks = 0;
+	int answerCount1 = 0;
 }
 /**
  * Solution class for code-eval.
@@ -84,7 +85,7 @@ public final class Solution {
 			quiz.questions[i] = tokens[0];
 			String[] tokens_choices = tokens[1].split(",");
 			for (int j = 0; j < 4; j++) {
-				quiz.choices[i] = tokens_choices[j];
+				quiz.choices[i][j] = tokens_choices[j];
 			}
 			quiz.correctAnswer[i] = Integer.parseInt(tokens[2]);
 			quiz.marks[i] = Integer.parseInt(tokens[3]);
@@ -104,12 +105,15 @@ public final class Solution {
 		// write your code here to display the quiz questions
 		// read the user responses from the console
 		// store the user respones in the quiz object
+		quiz.answerCount1 = answerCount;
 		for (int i = 0; i < answerCount; i++) {
-			System.out.println(quiz.questions[i] + "(" + i + 1 + ")");
-			System.out.println(quiz.choices[0] + "\t" + quiz.choices[2] + "\t" + quiz.choices[4] + "\t" + quiz.choices[6]);
-			/*String[] tokens_ans = s.nextLine().split(" ");*/
-			/*quiz.userAnswers[i] = Integer.parseInt(tokens_ans[1]);*/
-
+			System.out.println(quiz.questions[i] + "(" + (i + 1) + ")");
+			System.out.println(quiz.choices[i][0] + "\t" + quiz.choices[i][1] + "\t" + quiz.choices[i][2] + "\t" + quiz.choices[i][3]);
+			System.out.println();
+		}
+		for (int i = 0; i < quiz.answerCount1; i++) {
+			String[] tokens_ans = s.nextLine().replace(" ", ",").split(",");
+			quiz.userAnswers[i] = Integer.parseInt(tokens_ans[1]);
 		}
 	}
 
@@ -121,9 +125,11 @@ public final class Solution {
 	public static void displayScore(final Quiz quiz) {
 		// write your code here to display the score report
 		Scanner s = new Scanner(System.in);
-		for (int i = 0; i < quiz.userAnswers.length; i++) {
-			String[] tokens_ans = s.nextLine().split(" ");
-			quiz.userAnswers[i] = Integer.parseInt(tokens_ans[1]);
+		for (int i = 0; i < quiz.answerCount1; i++) {
+			/*String[] tokens_ans = s.nextLine().replace(" ", ",").split(",");
+			System.out.println(tokens_ans);*/
+			/*quiz.userAnswers[i] = Integer.parseInt(tokens_ans[1]);*/
+			System.out.println("question text "+(i+1));
 			if (quiz.userAnswers[i] == quiz.correctAnswer[i]) {
 				System.out.println("Correct Answer! - Marks Awarded: " + quiz.marks[i]);
 				quiz.userMarks += quiz.marks[i];
