@@ -10,14 +10,42 @@ class Quiz {
     ArrayList<Integer> marks = new ArrayList<>();
     ArrayList<Integer> negMarks = new ArrayList<>();*/
     //int answerCount = 0;
+    
+    /**
+     * { var_description }
+     */
     String[] questions = new String[100];
+    /**
+     * { var_description }
+     */
     String[][] choices = new String[100][100];
+    /**
+     * { var_description }
+     */
     int[] correctAnswer = new int[100];
+    /**
+     * { var_description }
+     */
     int[] userAnswers = new int[100];
+    /**
+     * { var_description }
+     */
     int[] marks = new int[100];
+    /**
+     * { var_description }
+     */
     int[] negMarks = new int[100];
+    /**
+     * { var_description }
+     */
     int userMarks = 0;
+    /**
+     * { var_description }
+     */
     int answerCount1 = 0;
+    /**
+     * { var_description }
+     */
     int questionCount1 = 0;
 }
 /**
