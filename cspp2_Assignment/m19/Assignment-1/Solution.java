@@ -150,6 +150,7 @@ public final class Solution {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
+        final int last = 3;
         if (quiz.questionCount1 != 0) {
             quiz.answerCount1 = answerCount;
             for (int i = 0; i < answerCount; i++) {
@@ -157,7 +158,7 @@ public final class Solution {
                 System.out.println(quiz.choices[i][0]
                                    + "\t" + quiz.choices[i][1]
                                    + "\t" + quiz.choices[i][2]
-                                   + "\t" + quiz.choices[i][3]);
+                                   + "\t" + quiz.choices[i][last]);
                 System.out.println();
             }
             for (int i = 0; i < quiz.answerCount1; i++) {
