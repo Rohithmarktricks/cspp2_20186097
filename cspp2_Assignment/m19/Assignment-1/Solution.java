@@ -3,17 +3,10 @@ import java.util.Scanner;
  * Class for quiz.
  */
 class Quiz {
-    /*ArrayList<String> questions = new ArrayList<>();
-    ArrayList<String> choices = new ArrayList<>();
-    ArrayList<Integer> correctAnswer = new ArrayList<>();
-    ArrayList<Integer> userAnswers = new ArrayList<>();
-    ArrayList<Integer> marks = new ArrayList<>();
-    ArrayList<Integer> negMarks = new ArrayList<>();*/
-    //int answerCount = 0;
     /**
      * questions.
      */
-    protected String[] questions = new String[100];
+    String[] questions = new String[100];
     /**
      * choices.
      */
