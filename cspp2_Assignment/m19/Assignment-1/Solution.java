@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import java.util.ArrayList;
+import java.util.Arrays;
 
 class Quiz {
 	/*ArrayList<String> questions = new ArrayList<>();
@@ -82,15 +82,15 @@ public final class Solution {
 		for (int i = 0; i < questionCount; i++) {
 			String[] tokens = s.nextLine().split(":");
 			quiz.questions[i] = tokens[0];
-			/*for (int j = 0; j < tokens[1].length; j++) {
-				quiz.choices.add(tokens[1][i].split(","));
-			}*/
+			String[] tokens_choices = tokens[1].split(",");
+			for (int j = 0; j < 4; j++) {
+				quiz.choices[i] = tokens_choices[j];
+			}
 			quiz.correctAnswer[i] = Integer.parseInt(tokens[2]);
 			quiz.marks[i] = Integer.parseInt(tokens[3]);
 			quiz.negMarks[i] = Integer.parseInt(tokens[4]);
-			System.out.println(questionCount+"are added to the quiz");
-
 		}
+		System.out.println(questionCount + " are added to the quiz");
 	}
 
 	/**
@@ -105,16 +105,11 @@ public final class Solution {
 		// read the user responses from the console
 		// store the user respones in the quiz object
 		for (int i = 0; i < answerCount; i++) {
-			System.out.println(quiz.questions[i]+"("+i+")");
-			String[] tokens_ans = s.nextLine().split(" ");
-			quiz.userAnswers[i] = Integer.parseInt(tokens_ans[1]);
-			if (quiz.userAnswers[i] == quiz.correctAnswer[i]) {
-				System.out.println("Correct Answer! - Marks Awarded: "+ quiz.marks[i]);
-				quiz.userMarks += quiz.marks[i];
-			} else {
-				System.out.println("Wrong Answer! - Penality: "+quiz.negMarks[i]);
-				quiz.userMarks += quiz.negMarks[i];
-			}
+			System.out.println(quiz.questions[i] + "(" + i + 1 + ")");
+			System.out.println(quiz.choices[0] + "\t" + quiz.choices[2] + "\t" + quiz.choices[4] + "\t" + quiz.choices[6]);
+			/*String[] tokens_ans = s.nextLine().split(" ");*/
+			/*quiz.userAnswers[i] = Integer.parseInt(tokens_ans[1]);*/
+
 		}
 	}
 
@@ -125,6 +120,18 @@ public final class Solution {
 	 */
 	public static void displayScore(final Quiz quiz) {
 		// write your code here to display the score report
-		System.out.println(quiz.userMarks);
+		Scanner s = new Scanner(System.in);
+		for (int i = 0; i < quiz.userAnswers.length; i++) {
+			String[] tokens_ans = s.nextLine().split(" ");
+			quiz.userAnswers[i] = Integer.parseInt(tokens_ans[1]);
+			if (quiz.userAnswers[i] == quiz.correctAnswer[i]) {
+				System.out.println("Correct Answer! - Marks Awarded: " + quiz.marks[i]);
+				quiz.userMarks += quiz.marks[i];
+			} else {
+				System.out.println("Wrong Answer! - Penality: " + quiz.negMarks[i]);
+				quiz.userMarks += quiz.negMarks[i];
+			}
+		}
+		System.out.println("Total Score: " + quiz.userMarks);
 	}
 }
