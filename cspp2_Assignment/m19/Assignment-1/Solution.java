@@ -98,7 +98,9 @@ public final class Solution {
      * @param      quiz           The quiz object
      * @param      questionCount  The question count
      */
-    public static void loadQuestions(final Scanner s, final Quiz quiz, final int questionCount) {
+    public static void loadQuestions(final Scanner s,
+                                     final Quiz quiz,
+                                     final int questionCount) {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
@@ -108,9 +110,9 @@ public final class Solution {
                 String[] tokens = s.nextLine().split(":");
                 if (tokens.length == 5) {
                     quiz.questions[i] = tokens[0];
-                    String[] tokens_choices = tokens[1].split(",");
-                    for (int j = 0; j < quiz.questionCount1 ; j++) {
-                        quiz.choices[i][j] = tokens_choices[j];
+                    String[] tokensChoices = tokens[1].split(",");
+                    for (int j = 0; j < quiz.questionCount1; j++) {
+                        quiz.choices[i][j] = tokensChoices[j];
                     }
                     quiz.correctAnswer[i] = Integer.parseInt(tokens[2]);
                     quiz.marks[i] = Integer.parseInt(tokens[3]);
@@ -139,7 +141,6 @@ public final class Solution {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
-        // 
         if (quiz.questionCount1 != 0) {
             quiz.answerCount1 = answerCount;
             for (int i = 0; i < answerCount; i++) {
