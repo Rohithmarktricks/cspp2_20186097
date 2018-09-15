@@ -12,39 +12,39 @@ class Quiz {
     //int answerCount = 0;
     
     /**
-     * { var_description }
+     * questions.
      */
     String[] questions = new String[100];
     /**
-     * { var_description }
+     * choices.
      */
     String[][] choices = new String[100][100];
     /**
-     * { var_description }
+     * correctAnswers.
      */
     int[] correctAnswer = new int[100];
     /**
-     * { var_description }
+     * userAnswers.
      */
     int[] userAnswers = new int[100];
     /**
-     * { var_description }
+     * marks.
      */
     int[] marks = new int[100];
     /**
-     * { var_description }
+     * negMarks.
      */
     int[] negMarks = new int[100];
     /**
-     * { var_description }
+     * userMarks.
      */
     int userMarks = 0;
     /**
-     * { var_description }
+     * answerCount1.
      */
     int answerCount1 = 0;
     /**
-     * { var_description }
+     * questionCount1.
      */
     int questionCount1 = 0;
 }
