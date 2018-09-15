@@ -145,10 +145,10 @@ public final class Solution {
             quiz.answerCount1 = answerCount;
             for (int i = 0; i < answerCount; i++) {
                 System.out.println(quiz.questions[i] + "(" + (i + 1) + ")");
-                System.out.println(quiz.choices[i][0] +
-                                   "\t" + quiz.choices[i][1] +
-                                   "\t" + quiz.choices[i][2] +
-                                   "\t" + quiz.choices[i][3]);
+                System.out.println(quiz.choices[i][0]
+                                   + "\t" + quiz.choices[i][1]
+                                   + "\t" + quiz.choices[i][2]
+                                   + "\t" + quiz.choices[i][3]);
                 System.out.println();
             }
             for (int i = 0; i < quiz.answerCount1; i++) {
