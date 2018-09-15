@@ -96,14 +96,15 @@ public final class Solution {
                     quiz.marks[i] = Integer.parseInt(tokens[3]);
                     quiz.negMarks[i] = Integer.parseInt(tokens[4]);
                 } else {
-                    System.out.println("Quiz does not have questions");
+                    System.out.println("Error! Malformed question");
+                    return;
                 }
             } System.out.println(questionCount + " are added to the quiz");
             
 
         }
         else {
-                System.out.println("Error! Malformed question");
+                System.out.println("Quiz does not have questions");
             }
     }
 
