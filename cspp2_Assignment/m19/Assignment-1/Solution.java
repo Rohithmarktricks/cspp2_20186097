@@ -10,7 +10,6 @@ class Quiz {
     ArrayList<Integer> marks = new ArrayList<>();
     ArrayList<Integer> negMarks = new ArrayList<>();*/
     //int answerCount = 0;
-    
     /**
      * questions.
      */
