@@ -131,10 +131,10 @@ public final class Solution {
 			/*quiz.userAnswers[i] = Integer.parseInt(tokens_ans[1]);*/
 			System.out.println("question text "+(i+1));
 			if (quiz.userAnswers[i] == quiz.correctAnswer[i]) {
-				System.out.println("Correct Answer! - Marks Awarded: " + quiz.marks[i]);
+				System.out.println(" Correct Answer! - Marks Awarded: " + quiz.marks[i]);
 				quiz.userMarks += quiz.marks[i];
 			} else {
-				System.out.println("Wrong Answer! - Penality: " + quiz.negMarks[i]);
+				System.out.println(" Wrong Answer! - Penality: " + quiz.negMarks[i]);
 				quiz.userMarks += quiz.negMarks[i];
 			}
 		}
