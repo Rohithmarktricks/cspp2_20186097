@@ -110,6 +110,7 @@ public final class Solution {
         // add the question objects to the quiz class
         final int three = 3;
         final int five = 5;
+        final int four = 4;
         quiz.questionCount1 = questionCount;
         if (questionCount != 0) {
             for (int i = 0; i < questionCount; i++) {
@@ -121,8 +122,8 @@ public final class Solution {
                         quiz.choices[i][j] = tokensChoices[j];
                     }
                     quiz.correctAnswer[i] = Integer.parseInt(tokens[2]);
-                    quiz.marks[i] = Integer.parseInt(tokens[3]);
-                    quiz.negMarks[i] = Integer.parseInt(tokens[4]);
+                    quiz.marks[i] = Integer.parseInt(tokens[three]);
+                    quiz.negMarks[i] = Integer.parseInt(tokens[four]);
                 } else {
                     System.out.println("Error! Malformed question");
                     return;
