@@ -89,7 +89,7 @@ public final class Solution {
                 if (tokens.length == 5) {
                     quiz.questions[i] = tokens[0];
                     String[] tokens_choices = tokens[1].split(",");
-                    for (int j = 0; j <quiz.questionCount1 ; j++) {
+                    for (int j = 0; j < quiz.questionCount1 ; j++) {
                         quiz.choices[i][j] = tokens_choices[j];
                     }
                     quiz.correctAnswer[i] = Integer.parseInt(tokens[2]);
@@ -100,12 +100,11 @@ public final class Solution {
                     return;
                 }
             } System.out.println(questionCount + " are added to the quiz");
-            
 
+
+        } else {
+            System.out.println("Quiz does not have questions");
         }
-        else {
-                System.out.println("Quiz does not have questions");
-            }
     }
 
 
@@ -146,10 +145,12 @@ public final class Solution {
             for (int i = 0; i < quiz.answerCount1; i++) {
                 System.out.println("question text " + (i + 1));
                 if (quiz.userAnswers[i] == quiz.correctAnswer[i]) {
-                    System.out.println(" Correct Answer! - Marks Awarded: " + quiz.marks[i]);
+                    System.out.println(" Correct Answer! - Marks Awarded: "
+                                       + quiz.marks[i]);
                     quiz.userMarks += quiz.marks[i];
                 } else {
-                    System.out.println(" Wrong Answer! - Penality: " + quiz.negMarks[i]);
+                    System.out.println(" Wrong Answer! - Penality: "
+                                       + quiz.negMarks[i]);
                     quiz.userMarks += quiz.negMarks[i];
                 }
             }
