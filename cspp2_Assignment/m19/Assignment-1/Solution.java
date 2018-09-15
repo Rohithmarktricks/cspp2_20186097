@@ -119,6 +119,7 @@ public final class Solution {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
+        // 
         if (quiz.questionCount1 != 0) {
             quiz.answerCount1 = answerCount;
             for (int i = 0; i < answerCount; i++) {
@@ -127,14 +128,14 @@ public final class Solution {
                 System.out.println();
             }
             for (int i = 0; i < quiz.answerCount1; i++) {
-                String[] tokens_ans = s.nextLine().replace(" ", ",").split(",");
-                quiz.userAnswers[i] = Integer.parseInt(tokens_ans[1]);
+                String[] tokensAns = s.nextLine().replace(" ", ",").split(",");
+                quiz.userAnswers[i] = Integer.parseInt(tokensAns[1]);
             }
         }
     }
 
     /**
-     * Displays the score report
+     * Displays the score report.
      *
      * @param      quiz     The quiz object
      */
