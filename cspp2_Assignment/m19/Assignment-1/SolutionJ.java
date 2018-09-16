@@ -1,7 +1,97 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Arrays;
+/**
+ * Class for quiz.
+ */
+class Quiz {
 
+    ArrayList<String> questions = new ArrayList<String>();
+    ArrayList<String> answers = new ArrayList<String>();
+    ArrayList<Integer> maxMarks = new ArrayList<Integer>();
+    ArrayList<Integer> penalityMarks = new ArrayList<Integer>();
+    ArrayList<String> chooses = new ArrayList<String>();
+
+    ArrayList<String> inputanswers = new ArrayList<String>();
+
+
+
+    void addQuestion(String question) {
+        questions.add(question);
+    }
+
+    void addAnswer(String answer) {
+        //System.out.println(answer);
+        answers.add(answer);
+
+    }
+
+    void addchoises(String choice) {
+        chooses.add(choice);
+    }
+
+    void addMaxMarks(int maxmark) {
+        maxMarks.add(maxmark);
+    }
+
+    void addpenality(int penality) {
+        penalityMarks.add(penality);
+    }
+
+    void displayQuizList() {
+        if (questions.size() != 0 && answers.size() != 0 && penalityMarks.size() != 0 && maxMarks.size() != 0 && chooses.size() != 0) {
+            int i = 0;
+            for (String que : questions) {
+                System.out.println(que + "(" + maxMarks.get(i) + ")");
+                System.out.println(chooses.get(i));
+                System.out.println();
+                i++;
+            }
+        }
+    }
+
+    /**
+     * Adds an user answer.
+     *
+     * @param      answer  Theanswer
+     */
+    void addUserAnswer(final String answer) {
+        //System.out.println(answer);
+        inputanswers.add(answer);
+    }
+
+    /**
+     * display Score.
+     */
+    void displayScore() {
+        if (questions.size() != 0 && answers.size() != 0
+            && penalityMarks.size() != 0
+            && maxMarks.size() != 0
+            && chooses.size() != 0) {
+            int i = 0;
+            int score = 0;
+            for (String ans : answers) {
+                System.out.println(questions.get(i));
+                if (ans.equals(inputanswers.get(i))) {
+                    System.out.println(" Correct Answer! - Marks Awarded: "
+                        + maxMarks.get(i));
+                    score += maxMarks.get(i);
+                } else {
+                    // Wrong Answer! - Penalty: -4Total Score: 10
+                    System.out.println(" Wrong Answer! - Penalty: "
+                        + penalityMarks.get(i));
+                    score += penalityMarks.get(i);
+                }
+                i++;
+            }
+            System.out.println("Total Score: " + score);
+
+        }
+
+    }
+
+
+}
 /**
  * Solution class for code-eval.
  */
@@ -83,7 +173,7 @@ public final class SolutionJ {
                     System.out.println(tokens[0] + " does not have enough answer choices");
                     return;
                 }
-                quiz.addchooses(tokens[1].replace(",", "\t"));
+                quiz.addchoises(tokens[1].replace(",", "\t"));
                 if (Integer.parseInt(tokens[2]) > 4) {
                     System.out.println("Error! Correct answer choice number is out of range for question text " + (i + 1));
                     return;
@@ -129,7 +219,7 @@ public final class SolutionJ {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
-        quiz.displayQuizQue();
+        quiz.displayQuizList();
 
         for (int i = 0; i < answerCount; i++) {
             String line = s.nextLine();
@@ -150,94 +240,7 @@ public final class SolutionJ {
 
 
 
-class Quiz {
 
-    ArrayList<String> questions = new ArrayList<String>();
-    ArrayList<String> answers = new ArrayList<String>();
-    ArrayList<Integer> maxMarks = new ArrayList<Integer>();
-    ArrayList<Integer> penalityMarks = new ArrayList<Integer>();
-    ArrayList<String> chooses = new ArrayList<String>();
-
-    ArrayList<String> inputanswers = new ArrayList<String>();
-
-
-
-    void addQuestion(String question) {
-        questions.add(question);
-    }
-
-    void addAnswer(String answer) {
-        //System.out.println(answer);
-        answers.add(answer);
-
-    }
-
-    void addchooses(String choice) {
-        chooses.add(choice);
-    }
-
-    void addMaxMarks(int maxmark) {
-        maxMarks.add(maxmark);
-    }
-
-    void addpenality(int penality) {
-        penalityMarks.add(penality);
-    }
-
-    void displayQuizQue() {
-        if (questions.size() != 0 && answers.size() != 0 && penalityMarks.size() != 0 && maxMarks.size() != 0 && chooses.size() != 0) {
-            int i = 0;
-            for (String que : questions) {
-                System.out.println(que + "(" + maxMarks.get(i) + ")");
-                System.out.println(chooses.get(i));
-                System.out.println();
-                i++;
-            }
-        }
-    }
-
-    /**
-     * Adds an user answer.
-     *
-     * @param      answer  Theanswer
-     */
-    void addUserAnswer(final String answer) {
-        //System.out.println(answer);
-        inputanswers.add(answer);
-    }
-
-    /**
-     * display Score.
-     */
-    void displayScore() {
-        if (questions.size() != 0 && answers.size() != 0
-            && penalityMarks.size() != 0
-            && maxMarks.size() != 0
-            && chooses.size() != 0) {
-            int i = 0;
-            int score = 0;
-            for (String ans : answers) {
-                System.out.println(questions.get(i));
-                if (ans.equals(inputanswers.get(i))) {
-                    System.out.println(" Correct Answer! - Marks Awarded: "
-                        + maxMarks.get(i));
-                    score += maxMarks.get(i);
-                } else {
-                    // Wrong Answer! - Penalty: -4Total Score: 10
-                    System.out.println(" Wrong Answer! - Penalty: "
-                        + penalityMarks.get(i));
-                    score += penalityMarks.get(i);
-                }
-                i++;
-            }
-            System.out.println("Total Score: " + score);
-
-        }
-
-    }
-
-
-}
 
 
 
