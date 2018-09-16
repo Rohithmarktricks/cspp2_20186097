@@ -98,7 +98,7 @@ public final class SolutionJ {
                     System.out.println("Invalid max marks for " + tokens[i]);
                     return;
                 }
-                quiz.addMaxmarks(Integer.parseInt(tokens[3]));
+                quiz.addMaxMarks(Integer.parseInt(tokens[3]));
 
                 if (Integer.parseInt(tokens[4]) > 0) {
                     System.out.println("Invalid penalty for " + tokens[i]);
@@ -154,7 +154,7 @@ class Quiz {
 
     ArrayList<String> questions = new ArrayList<String>();
     ArrayList<String> answers = new ArrayList<String>();
-    ArrayList<Integer> maxmarks = new ArrayList<Integer>();
+    ArrayList<Integer> maxMarks = new ArrayList<Integer>();
     ArrayList<Integer> penalityMarks = new ArrayList<Integer>();
     ArrayList<String> chooses = new ArrayList<String>();
 
@@ -176,8 +176,8 @@ class Quiz {
         chooses.add(choice);
     }
 
-    void addMaxmarks(int maxmark) {
-        maxmarks.add(maxmark);
+    void addMaxMarks(int maxmark) {
+        maxMarks.add(maxmark);
     }
 
     void addpenality(int penality) {
@@ -185,10 +185,10 @@ class Quiz {
     }
 
     void displayQuizQue() {
-        if (questions.size() != 0 && answers.size() != 0 && penalityMarks.size() != 0 && maxmarks.size() != 0 && chooses.size() != 0) {
+        if (questions.size() != 0 && answers.size() != 0 && penalityMarks.size() != 0 && maxMarks.size() != 0 && chooses.size() != 0) {
             int i = 0;
             for (String que : questions) {
-                System.out.println(que + "(" + maxmarks.get(i) + ")");
+                System.out.println(que + "(" + maxMarks.get(i) + ")");
                 System.out.println(chooses.get(i));
                 System.out.println();
                 i++;
@@ -212,7 +212,7 @@ class Quiz {
     void displayScore() {
         if (questions.size() != 0 && answers.size() != 0
             && penalityMarks.size() != 0
-            && maxmarks.size() != 0
+            && maxMarks.size() != 0
             && chooses.size() != 0) {
             int i = 0;
             int score = 0;
@@ -220,8 +220,8 @@ class Quiz {
                 System.out.println(questions.get(i));
                 if (ans.equals(inputanswers.get(i))) {
                     System.out.println(" Correct Answer! - Marks Awarded: "
-                        + maxmarks.get(i));
-                    score += maxmarks.get(i);
+                        + maxMarks.get(i));
+                    score += maxMarks.get(i);
                 } else {
                     // Wrong Answer! - Penalty: -4Total Score: 10
                     System.out.println(" Wrong Answer! - Penalty: "
