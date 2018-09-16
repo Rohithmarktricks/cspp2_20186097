@@ -73,7 +73,6 @@ public final class SolutionJ {
         for (int i = 0; i < questionCount; i++) {
             String line = s.nextLine();
             String[] tokens = line.split(":");
-            //System.out.println(Arrays.toString(tokens));
             try {
                 if (tokens[0].equals("")) {
                     System.out.println("Error! Malformed question");
