@@ -117,7 +117,7 @@ public final class Solution {
                 if (tokens.length == five) {
                     quiz.questions[i] = tokens[0];
                     String[] tokensChoices = tokens[1].split(",");
-                    for (int j = 0; j < quiz.questionCount1; j++) {
+                    for (int j = 0; j < 4; j++) {
                         quiz.choices[i][j] = tokensChoices[j];
                     }
                     quiz.correctAnswer[i] = Integer.parseInt(tokens[2]);
