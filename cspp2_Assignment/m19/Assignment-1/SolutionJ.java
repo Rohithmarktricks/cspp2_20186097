@@ -156,7 +156,7 @@ class Quiz {
     ArrayList<String> questions = new ArrayList<String>();
     ArrayList<String> answers = new ArrayList<String>();
     ArrayList<Integer> maxmarks = new ArrayList<Integer>();
-    ArrayList<Integer> penalitys = new ArrayList<Integer>();
+    ArrayList<Integer> penalityMarks = new ArrayList<Integer>();
     ArrayList<String> chooses = new ArrayList<String>();
 
     ArrayList<String> inputanswers = new ArrayList<String>();
@@ -182,11 +182,11 @@ class Quiz {
     }
 
     void addpenality(int penality) {
-        penalitys.add(penality);
+        penalityMarks.add(penality);
     }
 
     void displayQuizQue() {
-        if (questions.size() != 0 && answers.size() != 0 && penalitys.size() != 0 && maxmarks.size() != 0 && chooses.size() != 0) {
+        if (questions.size() != 0 && answers.size() != 0 && penalityMarks.size() != 0 && maxmarks.size() != 0 && chooses.size() != 0) {
             int i = 0;
             for (String que : questions) {
                 System.out.println(que + "(" + maxmarks.get(i) + ")");
@@ -212,7 +212,7 @@ class Quiz {
      */
     void displayScore() {
         if (questions.size() != 0 && answers.size() != 0
-            && penalitys.size() != 0
+            && penalityMarks.size() != 0
             && maxmarks.size() != 0
             && chooses.size() != 0) {
             int i = 0;
@@ -226,8 +226,8 @@ class Quiz {
                 } else {
                     // Wrong Answer! - Penalty: -4Total Score: 10
                     System.out.println(" Wrong Answer! - Penalty: "
-                        + penalitys.get(i));
-                    score += penalitys.get(i);
+                        + penalityMarks.get(i));
+                    score += penalityMarks.get(i);
                 }
                 i++;
             }
