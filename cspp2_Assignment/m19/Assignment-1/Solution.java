@@ -128,8 +128,8 @@ public final class Solution {
                         System.out.println("Quiz does not have questions");
                         return;
                     }
-                } System.out.println(questionCount + " are added to the quiz");
-            }
+                }
+            } System.out.println(questionCount + " are added to the quiz");
 
         } else {
             System.out.println("Quiz does not have questions");
@@ -166,28 +166,28 @@ public final class Solution {
     }
 
 
-/**
- * Displays the score report
- *
- * @param      quiz     The quiz object
- */
-public static void displayScore(final Quiz quiz) {
-    // write your code here to display the score report
-    if (quiz.questionCount1 != 0) {
-        Scanner s = new Scanner(System.in);
-        for (int i = 0; i < quiz.answerCount1; i++) {
-            System.out.println("question text " + (i + 1));
-            if (quiz.userAnswers[i] == quiz.correctAnswer[i]) {
-                System.out.println(" Correct Answer! - Marks Awarded: "
-                                   + quiz.marks[i]);
-                quiz.userMarks += quiz.marks[i];
-            } else {
-                System.out.println(" Wrong Answer! - Penality: "
-                                   + quiz.negMarks[i]);
-                quiz.userMarks += quiz.negMarks[i];
+    /**
+     * Displays the score report
+     *
+     * @param      quiz     The quiz object
+     */
+    public static void displayScore(final Quiz quiz) {
+        // write your code here to display the score report
+        if (quiz.questionCount1 != 0) {
+            Scanner s = new Scanner(System.in);
+            for (int i = 0; i < quiz.answerCount1; i++) {
+                System.out.println("question text " + (i + 1));
+                if (quiz.userAnswers[i] == quiz.correctAnswer[i]) {
+                    System.out.println(" Correct Answer! - Marks Awarded: "
+                                       + quiz.marks[i]);
+                    quiz.userMarks += quiz.marks[i];
+                } else {
+                    System.out.println(" Wrong Answer! - Penality: "
+                                       + quiz.negMarks[i]);
+                    quiz.userMarks += quiz.negMarks[i];
+                }
             }
+            System.out.println("Total Score: " + quiz.userMarks);
         }
-        System.out.println("Total Score: " + quiz.userMarks);
     }
-}
 }
