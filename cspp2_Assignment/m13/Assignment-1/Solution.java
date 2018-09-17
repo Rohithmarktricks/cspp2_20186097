@@ -120,15 +120,7 @@ class Set {
      * @return    Common elements.
      */
     public Set intersection(final Set array) {
-        /*Set retain = new Set();
-        int s = array.size();
-        for (int j = 0; j < this.size(); j++) {
-            for (int i = 0; i < array.size(); i++) {
-                if (array.list[i] == this.list[j]) {
-                    retain.add(this.list[j]);
-                }
-            }
-        } return retain;*/
+
         return this.retainAll(array.list);
 
     }

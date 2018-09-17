@@ -6,12 +6,12 @@ public class GenericList<L> {
     private int size;
 
     protected GenericList() {
-        list = new GenericList<L>[10];
+        list = new L[10];
         size = 0;
     }
 
     public GenericList(int n) {
-        list = new GenericList<L>[n];
+        list = new L[n];
         size = n;
     }
 

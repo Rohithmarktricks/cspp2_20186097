@@ -48,6 +48,9 @@ public class List<E> {
     public void add(E item) {
         //Inserts the specified element at the end of the list.
         //You can modify the code in this method.
+        if (list.length == size) {
+            list = resize();
+        }
         list[(size++)] = item;
     }
     /*Inserts all the elements of specified int
@@ -69,6 +72,7 @@ public class List<E> {
      * resize method.
      */
     private void resize() {
+        //return Arrays.copyOf(list, 2*list.length);
         E[] newList = ((E[]) new Object[list.length * 2]);
         for (int i = 0; i < size; i++) {
             newList[i] = list[i];

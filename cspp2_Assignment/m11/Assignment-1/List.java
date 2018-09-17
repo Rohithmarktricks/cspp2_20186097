@@ -293,10 +293,10 @@ public class List {
      * @param      newArray  The new array
      */
     public void removeAll(final int[] newArray) {
-        int[] temp = Arrays.copyOf(list, list.length);
+        //int[] temp = Arrays.copyOf(list, list.length);
         for (int n : newArray) {
             for (int i = 0; i < size; i++) {
-                if (n == temp[i]) {
+                if (n == list[i]) {
                     remove(i);
                     i--;
                 }

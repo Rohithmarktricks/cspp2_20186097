@@ -45,8 +45,6 @@ class SortedSet extends Set {
                 break;
             }
         }
-
-        /*int temp = (size() == 0) ? 0 : this.get(reqindex);*/
         int temp = 0;
         if (size() == 0) {
             temp = 0;
@@ -140,7 +138,7 @@ class SortedSet extends Set {
     public int last() {
         if (this.size() == 0) {
             System.out.println("Set Empty Exception");
-            return get(this.size() - 1);
+            return -1;
         }
         return get(this.size() - 1);
 

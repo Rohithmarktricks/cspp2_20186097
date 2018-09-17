@@ -231,7 +231,7 @@ class Quiz {
 
         showMarks += "Total Score: " + score;
 
-        return showMarks ;
+        return showMarks;
     }
 }
 
