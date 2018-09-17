@@ -212,26 +212,26 @@ class Quiz {
     public String showReport() {
         int score = 0;
 
-        String s = "";
+        String showMarks = "";
 
 
         for (int i = 0; i < this.size; i++) {
-            s += questions[i].getQuestionText() + "\n";
+            showMarks += questions[i].getQuestionText() + "\n";
             if (questions[i].evaluateResponse(questions[i].getResponse())) {
-                s += " Correct Answer! - Marks Awarded: "
+                showMarks += " Correct Answer! - Marks Awarded: "
                 + questions[i].getMaxMarks() + "\n";
                 score += questions[i].getMaxMarks();
             } else {
-                s += " Wrong Answer! - Penalty: "
+                showMarks += " Wrong Answer! - Penalty: "
                 + questions[i].getPenalty() + "\n";
                 score += questions[i].getPenalty();
             }
 
         }
 
-        s += "Total Score: " + score;
+        showMarks += "Total Score: " + score;
 
-        return s;
+        return showMarks ;
     }
 }
 
@@ -402,11 +402,11 @@ public final class SolutionExp {
 
         for (int i = 0; i < q; i++) {
 
-            Question que = quiz.getQuestion(i);
-            System.out.println(que);
+            Question quizQuestions = quiz.getQuestion(i);
+            System.out.println(quizQuestions);
 
             String line = scan.nextLine();
-            que.setResponse(line);
+            quizQuestions.setResponse(line);
 
         }
     }
