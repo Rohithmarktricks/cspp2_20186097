@@ -1,6 +1,3 @@
-
-
-
 import java.util.Scanner;
 
 /**
@@ -227,16 +224,13 @@ class Quiz {
                 score += questions[i].getPenalty();
             }
 
-
         }
 
         s += "Total Score: " + score;
 
         return s;
     }
-
 }
-
 
 /**
  * SolutionExp class for code-eval.
@@ -253,7 +247,7 @@ public final class SolutionExp {
     /**
      * flag for error checking.
      */
-    private static boolean noprobInLoadque = true;
+    private static boolean noLoadingProblem = true;
 
     /**
      * main function to execute test cases.
@@ -312,7 +306,7 @@ public final class SolutionExp {
         // add the question objects to the quiz class
 
         if (q <= 0) {
-            noprobInLoadque = false;
+            noLoadingProblem = false;
             System.out.println("Quiz does not have questions");
             return;
         }
@@ -327,7 +321,7 @@ public final class SolutionExp {
 
                 if (tokens[0].equals("")) {
                     System.out.println("Error! Malformed question");
-                    noprobInLoadque = false;
+                    noLoadingProblem = false;
                     return;
                 }
 
@@ -336,7 +330,7 @@ public final class SolutionExp {
                 if (tokens[1].length() < minlength) {
                     System.out.println(tokens[0]
                         + " does not have enough answer choices");
-                    noprobInLoadque = false;
+                    noLoadingProblem = false;
                     return;
                 }
 
@@ -345,7 +339,7 @@ public final class SolutionExp {
                 if (Integer.parseInt(tokens[2]) > maxchoiceno) {
                     System.out.println("Error! Correct answer choice number "
                         + "is out of range for question text " + (i + 1));
-                    noprobInLoadque = false;
+                    noLoadingProblem = false;
                     return;
                 }
 
@@ -355,7 +349,7 @@ public final class SolutionExp {
 
                 if (Integer.parseInt(tokens[marksindex]) < minmarknum) {
                     System.out.println("Invalid max marks for " + tokens[i]);
-                    noprobInLoadque = false;
+                    noLoadingProblem = false;
                     return;
                 }
 
@@ -365,7 +359,7 @@ public final class SolutionExp {
 
                 if (Integer.parseInt(tokens[penaltyindex]) > maxpenalty) {
                     System.out.println("Invalid penalty for " + tokens[i]);
-                    noprobInLoadque = false;
+                    noLoadingProblem = false;
                     return;
                 }
 
@@ -379,7 +373,7 @@ public final class SolutionExp {
 
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("Error! Malformed question");
-            noprobInLoadque = false;
+            noLoadingProblem = false;
             return;
         }
 
@@ -399,7 +393,7 @@ public final class SolutionExp {
         // read the user responses from the console using scanner object.
         // store the user respone in the question object
 
-        if (!noprobInLoadque) {
+        if (!noLoadingProblem) {
             return;
         }
 
@@ -422,7 +416,7 @@ public final class SolutionExp {
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report using quiz object.
 
-        if (!noprobInLoadque) {
+        if (!noLoadingProblem) {
             return;
         }
 
