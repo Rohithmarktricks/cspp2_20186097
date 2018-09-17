@@ -104,9 +104,6 @@ public final class Solution {
      * @param      questionCount  The question count
      */
     public static void loadQuestions(final Scanner s, final Quiz quiz, final int questionCount) {
-        // write your code here to read the questions from the console
-        // tokenize the question line and create the question object
-        // add the question objects to the quiz class
         final int three = 3;
         final int five = 5;
         final int four = 4;
@@ -144,9 +141,6 @@ public final class Solution {
      * @param      answerCount  The answer count
      */
     public static void startQuiz(final Scanner s, final Quiz quiz, final int answerCount) {
-        // write your code here to display the quiz questions
-        // read the user responses from the console
-        // store the user respones in the quiz object
         final int last = 3;
         if (quiz.questionCount1 != 0) {
             quiz.answerCount1 = answerCount;
@@ -172,7 +166,6 @@ public final class Solution {
      * @param      quiz     The quiz object
      */
     public static void displayScore(final Quiz quiz) {
-        // write your code here to display the score report
         if (quiz.questionCount1 != 0) {
             Scanner s = new Scanner(System.in);
             for (int i = 0; i < quiz.answerCount1; i++) {
