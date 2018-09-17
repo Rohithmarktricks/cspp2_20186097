@@ -1,4 +1,7 @@
 import java.util.Scanner;
+/**
+ * @author:Rohithmarktricks.
+ */
 
 /**
  * Class for question.
