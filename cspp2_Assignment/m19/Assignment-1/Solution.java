@@ -175,7 +175,7 @@ public final class Solution {
                                        + quiz.marks[i]);
                     quiz.userMarks += quiz.marks[i];
                 } else {
-                    System.out.println(" Wrong Answer! - Penality: "
+                    System.out.println(" Wrong Answer! - Penalty: "
                                        + quiz.negMarks[i]);
                     quiz.userMarks += quiz.negMarks[i];
                 }
