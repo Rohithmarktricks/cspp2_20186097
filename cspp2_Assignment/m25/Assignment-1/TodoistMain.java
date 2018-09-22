@@ -183,9 +183,8 @@ class Todoist {
 					time += taskobj[i].getTimeToComplete();
 				}
 			}
-		}
-		catch(NullPointerException e){
-			System.out.println();
+		} catch (NullPointerException e) {
+			int me = 0;
 		}
 		return time;
 	}
