@@ -115,10 +115,10 @@ class Task {
 
 	public void setStatus(String status) {
 		if (status == "done" || status == "todo") {
-			this.status = status;
+			System.out.println("Invalid status" + status);
+			return;
 		}
-		System.out.println("Invalid status"+status);
-		return;
+		this.status = status;
 	}
 
 	public String toString() {
