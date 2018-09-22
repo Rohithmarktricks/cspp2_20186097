@@ -177,14 +177,14 @@ class Todoist {
 
 	public int totalTime4Completion() {
 		int time = 0;
-		try {
-			for (int i = 0; i < taskobj.length; i++) {
+		for (int i = 0; i < taskobj.length; i++) {
+			try {
 				if (taskobj[i].getStatus() == "done") {
 					time += taskobj[i].getTimeToComplete();
 				}
+			} catch (NullPointerException e) {
+				int me = 0;
 			}
-		} catch (NullPointerException e) {
-			int me = 0;
 		}
 		return time;
 	}
