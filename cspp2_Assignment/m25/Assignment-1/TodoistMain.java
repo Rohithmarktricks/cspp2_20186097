@@ -167,7 +167,7 @@ class Todoist {
 				}
 			}
 		}
-		return null;
+		return "null";
 	}
 
 	public Task[] getNextTask(String parameter, int param2) {
