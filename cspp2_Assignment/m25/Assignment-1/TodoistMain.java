@@ -39,13 +39,23 @@ class Task {
 	 * @param      urgent1          The urgent 1
 	 * @param      status1          The status 1
 	 */
-	Task(String title1, String assignedTo1, int timeToComplete1, Boolean important1, Boolean urgent1, String status1) {
+	Task(String title1, String assignedTo1, int timeToComplete1, Boolean important1, Boolean urgent1, String status1) throws Exception {
 		/*this.title = title1;
 		this.assignedTo = assignedTo1;
 		this.timeToComplete = timeToComplete1;
 		this.important = important1;
 		this.urgent = urgent1;
 		this.status = status1;*/
+		if (title1.equals("")) {
+			throw new Exception("Title not provided");
+		}
+		if (timeToComplete1 < 0) {
+			throw new Exception("Invalid timeToComplete " + timeToComplete1);
+		}
+		if (!(status1.equals("todo") || status1.equals("done"))) {
+			throw new Exception("Invalid status " + status1);
+		}
+
 
 		setTitle(title1);
 		setAssignedTo(assignedTo1);
@@ -167,23 +177,44 @@ class Todoist {
 				}
 			}
 		}
-		return "null";
+		return null;
 	}
 
 	public Task[] getNextTask(String parameter, int param2) {
-		Task[] ta = new Task[2];
-		return ta;
+		Task[] tas = new Task[param2];
+		int temp = 0;
+		for (int i = 0; i < taskobj.length; i++) {
+			if (taskobj[i].getAssignedTo().equals(parameter)) {
+				if (taskobj[i].getStatus().equals("todo")) {
+					if (taskobj[i].getImportant().equals("Important")
+					        && taskobj[i].getUrgent().equals("Not Urgent")) {
+						if (temp < param2) {
+							tas[temp++] = taskobj[i];
+						}
+					}
+				}
+			}
+		}
+		for (int i = 0; i < taskobj.length; i++) {
+			if (taskobj[i].getAssignedTo().equals(parameter)) {
+				if (taskobj[i].getStatus().equals("todo")) {
+					if (taskobj[i].getImportant().equals("Important")
+					        && taskobj[i].getUrgent().equals("Urgent")) {
+						if (temp < param2) {
+							tas[temp++] = taskobj[i];
+						}
+					}
+				}
+			}
+		}
+		return tas;
 	}
 
 	public int totalTime4Completion() {
 		int time = 0;
 		for (int i = 0; i < taskobj.length; i++) {
-			try {
-				if (taskobj[i].getStatus().equals("done")) {
-					time += taskobj[i].getTimeToComplete();
-				}
-			} catch (NullPointerException e) {
-				int me = 0;
+			if (taskobj[i].getStatus().equals("done")) {
+				time += taskobj[i].getTimeToComplete();
 			}
 		}
 		return time;
