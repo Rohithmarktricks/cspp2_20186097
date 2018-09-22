@@ -211,13 +211,13 @@ class Todoist {
 	}
 
 	public int totalTime4Completion() {
-		int time = 0;
+		int count = 0;
 		for (int i = 0; i < taskobj.length; i++) {
-			if (taskobj[i].getStatus().equals("done")) {
-				time += taskobj[i].getTimeToComplete();
+			if (taskobj[i].getStatus().equals("todo")) {
+				count += taskobj[i].getTimeToComplete();
 			}
 		}
-		return time;
+		return count;
 	}
 }
 
