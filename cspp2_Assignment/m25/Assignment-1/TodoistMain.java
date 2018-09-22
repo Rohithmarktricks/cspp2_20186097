@@ -81,15 +81,21 @@ class Task {
 		this.timeToComplete = timeToComplete;
 	}
 
-	public Boolean getImportant() {
-		return important;
+	public String getImportant() {
+		if (important) {
+			return "Important";
+		}
+		return "Not Important";
 	}
 
 	public void setImportant(Boolean important) {
 		this.important = important;
 	}
-	public Boolean getUrgent() {
-		return urgent;
+	public String getUrgent() {
+		if (urgent) {
+			return "Urgent";
+		}
+		return "Not Urgent";
 	}
 
 	public void setUrgent(Boolean urgent) {
@@ -148,7 +154,7 @@ class Todoist {
 	public String getNextTask(String parameter) {
 		for (int j = 0; j < taskobj.length; j++) {
 			if (taskobj[j].getAssignedTo() == parameter) {
-				if (taskobj[j].getStatus() == "todo" && taskobj[j].getImportant()  && taskobj[j].getUrgent()) {
+				if (taskobj[j].getStatus() == "todo" && taskobj[j].getImportant() == "Important"  && taskobj[j].getUrgent() == "Urgent") {
 					return taskobj[j].getTitle();
 				}
 			}
@@ -156,7 +162,7 @@ class Todoist {
 
 		for (int j = 0; j < taskobj.length; j++) {
 			if (taskobj[j].getAssignedTo() == parameter) {
-				if (taskobj[j].getStatus() == "todo" && taskobj[j].getImportant() && taskobj[j].getUrgent()) {
+				if (taskobj[j].getStatus() == "todo" && taskobj[j].getImportant() == "Important" && taskobj[j].getUrgent() == "Urgent") {
 					return taskobj[j].getTitle();
 				}
 			}
