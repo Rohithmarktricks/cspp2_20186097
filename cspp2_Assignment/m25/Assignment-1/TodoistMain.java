@@ -61,10 +61,6 @@ class Task {
 	}
 
 	public void setTitle(String title) {
-		if (title == "") {
-			System.out.println("Title not provided");
-			return;
-		}
 		this.title = title;
 	}
 
@@ -82,9 +78,6 @@ class Task {
 	}
 
 	public void setTimeToComplete(int timeToComplete) {
-		if (timeToComplete < 0) {
-			System.out.println("Invalid timeToComplete " + timeToComplete);
-		}
 		this.timeToComplete = timeToComplete;
 	}
 
@@ -114,10 +107,6 @@ class Task {
 	}
 
 	public void setStatus(String status) {
-		if (status == "done" || status == "todo") {
-			System.out.println("Invalid status" + status);
-			return;
-		}
 		this.status = status;
 	}
 
