@@ -7,7 +7,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
+//import java.util.ArrayList;
 
 class BagOfWords {
 
