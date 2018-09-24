@@ -189,7 +189,7 @@ class Todoist {
      */
     private Task[] taskobj;
     /**
-     * size of the Task array;
+     * size of the Task array.
      */
     private int size;
     /**
@@ -208,13 +208,22 @@ class Todoist {
     public void setSize(final int size1) {
         this.size = size1;
     }
-     public Task[] getTaskobj(){
-      return taskobj;
-     }
-     
-     public void setTaskobj(Task[] taskobj){
-      this.taskobj = taskobj;
-     }
+    /**
+     * Gets the taskobj.
+     *
+     * @return     The taskobj.
+     */
+    public Task[] getTaskobj() {
+        return taskobj;
+    }
+    /**
+     * Sets the taskobj.
+     *
+     * @param      taskobj1  The taskobj
+     */
+    public void setTaskobj(Task[] taskobj1) {
+        this.taskobj = taskobj1;
+    }
     /**
      * Constructs the object.
      */
