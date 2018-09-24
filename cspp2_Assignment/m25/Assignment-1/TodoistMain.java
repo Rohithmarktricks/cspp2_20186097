@@ -38,7 +38,7 @@ class Task {
      * @param      important1       The important 1
      * @param      urgent1          The urgent 1
      * @param      status1          The status 1
-     * @throws     Exception.
+     * @throws     Exception        The exception
      */
     Task(final String title1, final String assignedTo1,
          final int timeToComplete1,
