@@ -154,7 +154,7 @@ class Todoist {
 			if (taskobj[j].getAssignedTo() == parameter) {
 				if (taskobj[j].getStatus().equals("todo")) {
 					if (taskobj[j].getImportant().equals("Important")
-					        && taskobj[j].getUrgent().equals("Not Urgent")) {
+					        && taskobj[j].getUrgent().equals("Urgent")) {
 						return taskobj[j].getTitle();
 					}
 				}
