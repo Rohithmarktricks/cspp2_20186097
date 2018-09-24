@@ -139,45 +139,30 @@ class Todoist {
 		return s.substring(0, s.length() - 1);
 	}
 	public Task getNextTask(String parameter) {
-		 for (int i = 0; i < size; i++) {
-            if (taskobj[i].getAssignedTo().equals(parameter) && taskobj[i].getStatus().equals("todo")) {
-                if (taskobj[i].getImportant().equals("Important") && taskobj[i].getUrgent().equals("Not Urgent")) {
-                    return taskobj[i];
-                }
-            }
-        }
-        return null;
+		for (int i = 0; i < size; i++) {
+			if (taskobj[i].getAssignedTo().equals(parameter) && taskobj[i].getStatus().equals("todo")) {
+				if (taskobj[i].getImportant().equals("Important") && taskobj[i].getUrgent().equals("Not Urgent")) {
+					return taskobj[i];
+				}
+			}
+		}
+		return null;
 
 	}
 
 	public Task[] getNextTask(String parameter, int param2) {
-		Task[] tas = new Task[param2];
-		int temp = 0;
-		for (int i = 0; i < taskobj.length; i++) {
-			if (taskobj[i].getAssignedTo().equals(parameter)) {
-				if (taskobj[i].getStatus().equals("todo")) {
-					if (taskobj[i].getImportant().equals("Important")
-					        && taskobj[i].getUrgent().equals("Not Urgent")) {
-						if (temp < param2) {
-							tas[temp++] = taskobj[i];
-						}
-					}
+		Task[] getTasks = new Task[param2];
+		int index = 0;
+		for (int i = 0; i < size; i++) {
+			if (taskobj[i].getAssignedTo().equals(parameter) && taskobj[i].getStatus().equals("todo")) {
+				if (taskobj[i].getImportant().equals("Important") && taskobj[i].getUrgent().equals("Not Urgent")) {
+					getTasks[index] = taskobj[i];
+					index++;
+					if (index == param2) break;
 				}
 			}
 		}
-		for (int i = 0; i < taskobj.length; i++) {
-			if (taskobj[i].getAssignedTo().equals(parameter)) {
-				if (taskobj[i].getStatus().equals("todo")) {
-					if (taskobj[i].getImportant().equals("Important")
-					        && taskobj[i].getUrgent().equals("Urgent")) {
-						if (temp < param2) {
-							tas[temp++] = taskobj[i];
-						}
-					}
-				}
-			}
-		}
-		return tas;
+		return getTasks;
 	}
 
 	public int totalTime4Completion() {
