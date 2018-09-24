@@ -165,7 +165,7 @@ class Task {
      *
      * @param      status1  The status
      */
-    public void setStatus(String status1) {
+    public void setStatus(final String status1) {
         this.status = status1;
     }
     /**
@@ -174,7 +174,12 @@ class Task {
      * @return     String representation of the object.
      */
     public String toString() {
-        return this.getTitle() + ", " + this.getAssignedTo() + ", " + this.getTimeToComplete() + ", " + this.getImportant() + ", " + this.getUrgent() + ", " + this.getStatus();
+        return this.getTitle() + ", "
+               + this.getAssignedTo() + ", "
+               + this.getTimeToComplete() + ", "
+               + this.getImportant() + ", "
+               + this.getUrgent() + ", "
+               + this.getStatus();
     }
 
 }
@@ -221,7 +226,7 @@ class Todoist {
      *
      * @param      taskobj1  The taskobj
      */
-    public void setTaskobj(Task[] taskobj1) {
+    public void setTaskobj(final Task[] taskobj1) {
         this.taskobj = taskobj1;
     }
     /**
