@@ -65,61 +65,114 @@ class Task {
 
     }
 
-
+    /**
+     * Gets the title.
+     *
+     * @return     The title.
+     */
     public String getTitle() {
         return title;
     }
-
-    public void setTitle(String title) {
-        this.title = title;
+    /**
+     * Sets the title.
+     *
+     * @param      title  The title
+     */
+    public void setTitle(final String title1) {
+        this.title = title1;
     }
 
-
+    /**
+     * Gets the assigned to.
+     *
+     * @return     The assigned to.
+     */
     public String getAssignedTo() {
         return assignedTo;
     }
-
-    public void setAssignedTo(String assignedTo) {
-        this.assignedTo = assignedTo;
+    /**
+     * Sets the assigned to.
+     *
+     * @param      assignedTo  The assigned to
+     */
+    public void setAssignedTo(final String assignedTo1) {
+        this.assignedTo = assignedTo1;
     }
-
+    /**
+     * Gets the time to complete.
+     *
+     * @return     The time to complete.
+     */
     public int getTimeToComplete() {
         return timeToComplete;
     }
-
-    public void setTimeToComplete(int timeToComplete) {
-        this.timeToComplete = timeToComplete;
+    /**
+     * Sets the time to complete.
+     *
+     * @param      timeToComplete  The time to complete
+     */
+    public void setTimeToComplete(final int timeToComplete1) {
+        this.timeToComplete = timeToComplete1;
     }
-
+    /**
+     * Gets the important.
+     *
+     * @return     The important.
+     */
     public String getImportant() {
         if (important) {
             return "Important";
         }
         return "Not Important";
     }
-
-    public void setImportant(Boolean important) {
-        this.important = important;
+    /**
+     * Sets the important.
+     *
+     * @param      important  The important
+     */
+    public void setImportant(final Boolean important1) {
+        this.important = important1;
     }
+    /**
+     * Gets the urgent.
+     *
+     * @return     The urgent.
+     */
     public String getUrgent() {
         if (urgent) {
             return "Urgent";
         }
         return "Not Urgent";
     }
-
-    public void setUrgent(Boolean urgent) {
-        this.urgent = urgent;
+    /**
+     * Sets the urgent.
+     *
+     * @param      urgent  The urgent
+     */
+    public void setUrgent(final Boolean urgent1) {
+        this.urgent = urgent1;
     }
-
+    /**
+     * Gets the status.
+     *
+     * @return     The status.
+     */
     public String getStatus() {
         return status;
     }
-
-    public void setStatus(String status) {
-        this.status = status;
+    /**
+     * Sets the status.
+     *
+     * @param      status  The status
+     */
+    public void setStatus(String status1) {
+        this.status = status1;
     }
-
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         return this.getTitle() + ", " + this.getAssignedTo() + ", " + this.getTimeToComplete() + ", " + this.getImportant() + ", " + this.getUrgent() + ", " + this.getStatus();
     }
