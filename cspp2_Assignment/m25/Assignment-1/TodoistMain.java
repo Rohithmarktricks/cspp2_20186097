@@ -76,7 +76,7 @@ class Task {
     /**
      * Sets the title.
      *
-     * @param      title  The title
+     * @param      title1  The title
      */
     public void setTitle(final String title1) {
         this.title = title1;
@@ -93,7 +93,7 @@ class Task {
     /**
      * Sets the assigned to.
      *
-     * @param      assignedTo  The assigned to
+     * @param      assignedTo1  The assigned to
      */
     public void setAssignedTo(final String assignedTo1) {
         this.assignedTo = assignedTo1;
@@ -109,7 +109,7 @@ class Task {
     /**
      * Sets the time to complete.
      *
-     * @param      timeToComplete  The time to complete
+     * @param      timeToComplete1  The time to complete
      */
     public void setTimeToComplete(final int timeToComplete1) {
         this.timeToComplete = timeToComplete1;
@@ -128,7 +128,7 @@ class Task {
     /**
      * Sets the important.
      *
-     * @param      important  The important
+     * @param      important1  The important
      */
     public void setImportant(final Boolean important1) {
         this.important = important1;
@@ -147,7 +147,7 @@ class Task {
     /**
      * Sets the urgent.
      *
-     * @param      urgent  The urgent
+     * @param      urgent1  The urgent
      */
     public void setUrgent(final Boolean urgent1) {
         this.urgent = urgent1;
@@ -163,7 +163,7 @@ class Task {
     /**
      * Sets the status.
      *
-     * @param      status  The status
+     * @param      status1  The status
      */
     public void setStatus(String status1) {
         this.status = status1;
@@ -184,7 +184,13 @@ class Task {
  * Class for todoist.
  */
 class Todoist {
-    Task[] taskobj;
+    /**
+     * taskobj Task Array.
+     */
+    private Task[] taskobj;
+    /**
+     * size of the Task array;
+     */
     private int size;
     /**
      * Gets the size.
@@ -202,6 +208,13 @@ class Todoist {
     public void setSize(final int size1) {
         this.size = size1;
     }
+     public Task[] getTaskobj(){
+      return taskobj;
+     }
+     
+     public void setTaskobj(Task[] taskobj){
+      this.taskobj = taskobj;
+     }
     /**
      * Constructs the object.
      */
