@@ -167,7 +167,7 @@ class Todoist {
 
 	public int totalTime4Completion() {
 		int count = 0;
-		for (int i = 0; i < taskobj.length; i++) {
+		for (int i = 0; i < size; i++) {
 			if (taskobj[i].getStatus().equals("todo")) {
 				count += taskobj[i].getTimeToComplete();
 			}
