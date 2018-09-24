@@ -21,7 +21,7 @@ class Task {
 	 * @param      urgent1          The urgent 1
 	 * @param      status1          The status 1
 	 */
-	Task(String title1, String assignedTo1, int timeToComplete1, Boolean important1, Boolean urgent1, String status1) throws Exception {
+	Task(final String title1, final String assignedTo1, final int timeToComplete1, final Boolean important1, final Boolean urgent1, final String status1) throws Exception {
 
 		if (title1.equals("")) {
 			throw new Exception("Title not provided");
@@ -159,7 +159,7 @@ class Todoist {
 	 *
 	 * @return     The next task.
 	 */
-	public Task getNextTask(String parameter) {
+	public Task getNextTask(final String parameter) {
 		for (int i = 0; i < size; i++) {
 			if (taskobj[i].getAssignedTo().equals(parameter) && taskobj[i].getStatus().equals("todo")) {
 				if (taskobj[i].getImportant().equals("Important") && taskobj[i].getUrgent().equals("Not Urgent")) {
@@ -178,7 +178,7 @@ class Todoist {
 	 *
 	 * @return     The next task.
 	 */
-	public Task[] getNextTask(String parameter, int param2) {
+	public Task[] getNextTask(final String parameter, final int param2) {
 		Task[] getTasks = new Task[param2];
 		int index = 0;
 		for (int i = 0; i < size; i++) {
