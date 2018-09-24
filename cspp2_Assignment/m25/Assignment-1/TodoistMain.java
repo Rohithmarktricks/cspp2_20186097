@@ -112,11 +112,12 @@ class Task {
 class Todoist {
     Task[] taskobj;
     int size;
+    final int hundred = 100;
     /**
      * Constructs the object.
      */
     Todoist() {
-        taskobj = new Task[100];
+        taskobj = new Task[hundred];
         size = 0;
     }
     /**
@@ -124,7 +125,7 @@ class Todoist {
      *
      * @param      task  The task
      */
-    public void addTask(Task task) {
+    public void addTask(final Task task) {
         if (taskobj.length == size) {
             taskobj = resize();
         }
@@ -154,7 +155,8 @@ class Todoist {
                  + taskobj[i].getAssignedTo() + ", "
                  + taskobj[i].getTimeToComplete() + ", "
                  + taskobj[i].getImportant() + ", "
-                 + taskobj[i].getUrgent() + ", " + taskobj[i].getStatus() + "\n";
+                 + taskobj[i].getUrgent() + ", "
+                 + taskobj[i].getStatus() + "\n";
         }
         return s.substring(0, s.length() - 1);
     }
