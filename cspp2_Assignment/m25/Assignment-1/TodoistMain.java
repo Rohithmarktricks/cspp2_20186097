@@ -40,8 +40,10 @@ class Task {
      * @param      status1          The status 1
      * @throws     Exception.
      */
-    Task(final String title1, final String assignedTo1, final int timeToComplete1,
-         final Boolean important1, final Boolean urgent1, final String status1)
+    Task(final String title1, final String assignedTo1,
+         final int timeToComplete1,
+         final Boolean important1, final Boolean urgent1,
+         final String status1)
     throws Exception {
 
         if (title1.equals("")) {
