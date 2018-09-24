@@ -263,13 +263,7 @@ public class TodoistMain {
 
 		return new Task(
 		           title, assignedTo, timeToComplete, important, urgent, status);
-		/* catch (TitleNotProvidedException e) {
-			System.out.println("Title not provided");
-		} catch (InvalidStatusException e) {
-			System.out.println("Invalid status" + "<" + this.getStatus() + ">");
-		} catch (InvalidTimeToCompleteException e) {
-			System.out.println("Invalid time ToComplete" + "<" + this.getTimeToComplete() + ">");
-		}*/
+
 	}
 
 	/**
