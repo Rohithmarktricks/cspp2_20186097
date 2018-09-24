@@ -110,19 +110,29 @@ class Task {
 class Todoist {
 	Task[] taskobj;
 	int size;
-
+	/**
+	 * Constructs the object.
+	 */
 	Todoist() {
 		taskobj = new Task[100];
 		size = 0;
 	}
-
+	/**
+	 * Adds a task.
+	 *
+	 * @param      task  The task
+	 */
 	public void addTask(Task task) {
 		if (taskobj.length == size) {
 			taskobj = resize();
 		}
 		taskobj[size++] = task;
 	}
-
+	/**
+	 * To create a new Task array.
+	 *
+	 * @return     a Task array.
+	 */
 	public Task[] resize() {
 		Task[] newList = new Task[taskobj.length * 2];
 		for (int i = 0; i < size; i++) {
@@ -130,7 +140,11 @@ class Todoist {
 		}
 		return newList;
 	}
-
+	/**
+	 * Returns a string representation of the object.
+	 *
+	 * @return     String representation of the object.
+	 */
 	public String toString() {
 		String s = "";
 		for (int i = 0; i < size; i++) {
@@ -138,6 +152,13 @@ class Todoist {
 		}
 		return s.substring(0, s.length() - 1);
 	}
+	/**
+	 * Gets the next task.
+	 *
+	 * @param      parameter  The parameter
+	 *
+	 * @return     The next task.
+	 */
 	public Task getNextTask(String parameter) {
 		for (int i = 0; i < size; i++) {
 			if (taskobj[i].getAssignedTo().equals(parameter) && taskobj[i].getStatus().equals("todo")) {
@@ -149,7 +170,14 @@ class Todoist {
 		return null;
 
 	}
-
+	/**
+	 * Gets the next task.
+	 *
+	 * @param      parameter  The parameter
+	 * @param      param2     The parameter 2
+	 *
+	 * @return     The next task.
+	 */
 	public Task[] getNextTask(String parameter, int param2) {
 		Task[] getTasks = new Task[param2];
 		int index = 0;
@@ -164,7 +192,11 @@ class Todoist {
 		}
 		return getTasks;
 	}
-
+	/**
+	 * Total time taken.
+	 *
+	 * @return     time taken(int).
+	 */
 	public int totalTime4Completion() {
 		int count = 0;
 		for (int i = 0; i < size; i++) {
@@ -184,7 +216,7 @@ public class TodoistMain {
 	/**
 	 * Constructs the object.
 	 */
-	protected TodoistMain(){
+	protected TodoistMain() {
 		//unused.
 	}
 
