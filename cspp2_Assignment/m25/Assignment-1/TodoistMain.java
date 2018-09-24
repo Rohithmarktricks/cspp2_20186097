@@ -112,11 +112,11 @@ class Task {
 class Todoist {
     Task[] taskobj;
     int size;
-    final int hundred = 100;
     /**
      * Constructs the object.
      */
     Todoist() {
+        final int hundred = 100;
         taskobj = new Task[hundred];
         size = 0;
     }
