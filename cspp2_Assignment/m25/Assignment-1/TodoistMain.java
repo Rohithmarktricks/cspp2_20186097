@@ -223,7 +223,8 @@ public class TodoistMain {
 	 * @param      todo    The todo
 	 * @param      tokens  The tokens
 	 */
-	public static void testAddTask(final Todoist todo, final String[] tokens) {
+	public static void testAddTask(final Todoist todo,
+	                               final String[] tokens) {
 		try {
 			todo.addTask(createTask(tokens));
 		} catch (Exception e) {
