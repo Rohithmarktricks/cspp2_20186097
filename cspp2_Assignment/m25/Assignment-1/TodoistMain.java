@@ -5,11 +5,29 @@ import java.util.Arrays;
  * Class for task.
  */
 class Task {
+    /**
+     * Title.
+     */
     private String title;
+    /**
+     * Name of the person.
+     */
     private String assignedTo;
+    /**
+     * Time to Complete.
+     */
     private int timeToComplete;
+    /**
+     * Important.
+     */
     private Boolean important;
+    /**
+     * Urgent.
+     */
     private Boolean urgent;
+    /**
+     * Status.
+     */
     private String status;
     /**
      * Constructs the object.
@@ -20,6 +38,7 @@ class Task {
      * @param      important1       The important 1
      * @param      urgent1          The urgent 1
      * @param      status1          The status 1
+     * @throws     Exception.
      */
     Task(final String title1, final String assignedTo1, final int timeToComplete1,
          final Boolean important1, final Boolean urgent1, final String status1)
@@ -112,13 +131,22 @@ class Task {
 class Todoist {
     Task[] taskobj;
     private int size;
-     public int getSize(){
-      return size;
-     }
-     
-     public void setSize(int size){
-      this.size = size;
-     }
+    /**
+     * Gets the size.
+     *
+     * @return     The size.
+     */
+    public int getSize() {
+        return size;
+    }
+    /**
+     * Sets the size.
+     *
+     * @param      size1  The size 1
+     */
+    public void setSize(final int size1) {
+        this.size = size1;
+    }
     /**
      * Constructs the object.
      */
