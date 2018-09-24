@@ -1,24 +1,6 @@
 import java.util.Scanner;
 import java.util.Arrays;
 
-/*class TitleNotProvidedException extends Exception {
-	public String toString() {
-		return "Title not provided";
-	}
-}
-
-class InvalidTimeToCompleteException extends Exception {
-	public String toString() {
-		return "Invalid time ToComplete" + "<" + ">";
-	}
-}
-
-class InvalidStatusException extends Exception {
-	public String toString() {
-		return "Invalid status" + "<" + ">";
-	}
-}*/
-
 /**
  * Class for task.
  */
@@ -40,12 +22,7 @@ class Task {
 	 * @param      status1          The status 1
 	 */
 	Task(String title1, String assignedTo1, int timeToComplete1, Boolean important1, Boolean urgent1, String status1) throws Exception {
-		/*this.title = title1;
-		this.assignedTo = assignedTo1;
-		this.timeToComplete = timeToComplete1;
-		this.important = important1;
-		this.urgent = urgent1;
-		this.status = status1;*/
+
 		if (title1.equals("")) {
 			throw new Exception("Title not provided");
 		}
@@ -56,13 +33,13 @@ class Task {
 			throw new Exception("Invalid status " + status1);
 		}
 
+		this.title = title1;
+		this.assignedTo = assignedTo1;
+		this.timeToComplete = timeToComplete1;
+		this.important = important1;
+		this.urgent = urgent1;
+		this.status = status1;
 
-		setTitle(title1);
-		setAssignedTo(assignedTo1);
-		setTimeToComplete(timeToComplete1);
-		setImportant(important1);
-		setUrgent(urgent1);
-		setStatus(status1);
 	}
 
 
