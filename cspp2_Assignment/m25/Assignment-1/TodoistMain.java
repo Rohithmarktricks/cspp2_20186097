@@ -138,29 +138,16 @@ class Todoist {
 		}
 		return s.substring(0, s.length() - 1);
 	}
-	public String getNextTask(String parameter) {
-		for (int j = 0; j < taskobj.length; j++) {
-			if (taskobj[j].getAssignedTo() == parameter) {
-				if (taskobj[j].getStatus().equals("todo")) {
-					if (taskobj[j].getImportant().equals("Important")
-					        && taskobj[j].getUrgent().equals("Not Urgent")) {
-						return taskobj[j].getTitle();
-					}
-				}
-			}
-		}
+	public Task getNextTask(String parameter) {
+		 for (int i = 0; i < size; i++) {
+            if (taskobj[i].getAssignedTo().equals(parameter) && taskobj[i].getStatus().equals("todo")) {
+                if (taskobj[i].getImportant().equals("Important") && taskobj[i].getUrgent().equals("Not Urgent")) {
+                    return taskobj[i];
+                }
+            }
+        }
+        return null;
 
-		for (int j = 0; j < taskobj.length; j++) {
-			if (taskobj[j].getAssignedTo() == parameter) {
-				if (taskobj[j].getStatus().equals("todo")) {
-					if (taskobj[j].getImportant().equals("Important")
-					        && taskobj[j].getUrgent().equals("Urgent")) {
-						return taskobj[j].getTitle();
-					}
-				}
-			}
-		}
-		return null;
 	}
 
 	public Task[] getNextTask(String parameter, int param2) {
