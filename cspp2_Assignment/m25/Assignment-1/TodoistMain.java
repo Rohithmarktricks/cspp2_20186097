@@ -181,6 +181,12 @@ class Todoist {
  * Class for todoist main.
  */
 public class TodoistMain {
+	/**
+	 * Constructs the object.
+	 */
+	protected TodoistMain(){
+		//unused.
+	}
 
 	/**
 	 * Starts a test.
